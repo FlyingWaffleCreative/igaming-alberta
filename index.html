@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iGaming Alberta — Alberta Online Casinos, Regulated Market Guide 2026</title>
+  <meta name="description" content="Your authoritative guide to Alberta online casinos, the July 13 regulated iGaming launch, licensed AB casino operators, and Alberta's best land-based venues by city." />
+  <meta name="keywords" content="Alberta online casinos, AB online casinos, Play Alberta, Alberta casinos, Alberta legit casinos, best AB casino, iGaming Alberta, Alberta regulated gambling" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F5F2EE;
+      --text: #2C2C2C;
+      --accent: #E8722A;
+      --secondary: #9E9E8F;
+      --card: #EDEAE4;
+      --white: #FFFFFF;
+      --border: #D8D4CE;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    header {
+      background: var(--text);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text .igaming {
+      font-family: 'Georgia', serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    .logo-text .alberta {
+      font-family: 'Georgia', serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--white);
+      letter-spacing: 0.08em;
+    }
+
+    .logo-text .tagline {
+      font-size: 0.72rem;
+      color: var(--secondary);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--secondary);
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    nav a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #2C2C2C 0%, #3d3d3d 60%, #1a1a1a 100%);
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E8722A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 1rem;
+      font-weight: normal;
+      line-height: 1.3;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #BCBCB0;
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+      font-family: Arial, sans-serif;
+    }
+
+    .launch-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2px;
+    }
+
+    /* ── OVERVIEW BOX ────────────────────────────────────── */
+    .overview-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 0;
+    }
+
+    .overview-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 4px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+    }
+
+    .overview-item {
+      padding: 1.25rem 1.5rem;
+      border-right: 1px solid var(--border);
+    }
+
+    .overview-item:last-child { border-right: none; }
+
+    .overview-label {
+      font-family: Arial, sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--secondary);
+      margin-bottom: 0.35rem;
+    }
+
+    .overview-value {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .overview-value.accent { color: var(--accent); }
+
+    /* ── MAIN CONTENT ────────────────────────────────────── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+    }
+
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      font-size: 1.6rem;
+      color: var(--text);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+
+    p { margin-bottom: 1rem; font-family: Arial, sans-serif; font-size: 0.97rem; }
+
+    /* ── CARD GRID ───────────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem;
+    }
+
+    .card .card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 { margin-bottom: 0.5rem; }
+
+    .card p { font-size: 0.9rem; color: #555; }
+
+    /* ── OPERATOR TABLE ──────────────────────────────────── */
+    .operator-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .operator-chip {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .operator-chip .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5CB85C;
+      flex-shrink: 0;
+    }
+
+    /* ── NEWS LIST ───────────────────────────────────────── */
+    .news-list { list-style: none; }
+
+    .news-list li {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .news-list li:last-child { border-bottom: none; }
+
+    .news-type {
+      background: var(--accent);
+      color: var(--white);
+      font-family: Arial, sans-serif;
+      font-size: 0.65rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .news-type.pod { background: #6B4FBB; }
+    .news-type.video { background: #CC0000; }
+
+    .news-content a {
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .news-meta {
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--secondary);
+    }
+
+    /* ── CITY SECTIONS ───────────────────────────────────── */
+    .city-block {
+      margin-bottom: 2rem;
+    }
+
+    .city-label {
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .casino-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .casino-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .casino-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .casino-card .casino-meta {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      color: var(--secondary);
+      margin-bottom: 0.6rem;
+    }
+
+    .casino-card p { font-size: 0.88rem; margin: 0; }
+
+    /* ── QUOTE BLOCK ─────────────────────────────────────── */
+    .pull-quote {
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.5rem;
+      background: var(--card);
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+
+    .pull-quote cite {
+      display: block;
+      font-style: normal;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+    }
+
+    /* ── TIMELINE ────────────────────────────────────────── */
+    .timeline { list-style: none; }
+
+    .timeline li {
+      display: flex;
+      gap: 1.25rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      align-items: baseline;
+    }
+
+    .timeline li:last-child { border-bottom: none; }
+
+    .tl-year {
+      font-weight: bold;
+      color: var(--accent);
+      flex-shrink: 0;
+      width: 90px;
+    }
+
+    /* ── RESPONSIBLE GAMBLING BOX ────────────────────────── */
+    .rg-box {
+      background: #f0ece7;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .rg-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: var(--text);
+      color: var(--secondary);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      padding: 2rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    footer strong { color: var(--white); }
+    footer a { color: var(--accent); }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 600px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { margin-left: 0; flex-wrap: wrap; gap: 1rem; }
+      .overview-box { grid-template-columns: repeat(2, 1fr); }
+      .overview-item { border-bottom: 1px solid var(--border); }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header>
+  <div class="logo-mark">
+    <!-- SVG Logo: Mountain silhouette + iA mark -->
+    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Mountain base -->
+      <polygon points="24,6 40,38 8,38" fill="#E8722A" opacity="0.15"/>
+      <!-- Left peak -->
+      <polyline points="8,38 20,16 28,28 36,20 40,38" fill="none" stroke="#E8722A" stroke-width="2.5" stroke-linejoin="round"/>
+      <!-- Star/dot at peak -->
+      <circle cx="20" cy="16" r="2.5" fill="#E8722A"/>
+      <!-- Bottom line -->
+      <line x1="4" y1="40" x2="44" y2="40" stroke="#E8722A" stroke-width="1.5"/>
+    </svg>
+    <div class="logo-text">
+      <div>
+        <span class="igaming">iGaming</span><span class="alberta">Alberta</span>
+      </div>
+      <div class="tagline">Your guide to AB regulated play</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#whats-changing">July 13</a>
+    <a href="#operators">Operators</a>
+    <a href="#news">News</a>
+    <a href="#land-based">Land-Based</a>
+  </nav>
+</header>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section class="hero">
+  <h1>Alberta Online Casinos:<br><span>The Regulated Era Starts July 13</span></h1>
+  <p>What you actually need to know about Alberta's new iGaming market — who's licensed, what changes, and where to play responsibly.</p>
+  <span class="launch-badge">⚡ Launch: July 13, 2026</span>
+</section>
+
+<!-- ── OVERVIEW BOX ────────────────────────────────────── -->
+<div class="overview-wrap">
+  <div class="overview-box">
+    <div class="overview-item">
+      <div class="overview-label">Legal Status</div>
+      <div class="overview-value accent">✅ Legal &amp; Regulated</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Minimum Age</div>
+      <div class="overview-value">18+</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Regulator</div>
+      <div class="overview-value">AGLC + AiGC</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Regulated Operators</div>
+      <div class="overview-value accent">50+ Expected</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Land-Based Casinos</div>
+      <div class="overview-value">21+ Licensed</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Tax on Winnings</div>
+      <div class="overview-value">None</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN ────────────────────────────────────────────── -->
+<main>
+
+  <!-- INTRO -->
+  <section id="about">
+    <h2>Alberta Casinos Online: A Turning Point</h2>
+    <p>Alberta isn't just dipping a toe in. On July 13, 2026, the province throws the doors open to a fully regulated online casino and sports betting market — only the second province in Canada to do it after Ontario. If you've been playing on grey-market sites, or sticking strictly to Play Alberta, things are about to change considerably.</p>
+    <p>This page exists to cut through the noise. We're not here to steer you toward a particular operator. We're here to explain what's actually happening, who's involved, what it means for Albertans, and where the reliable information lives. <strong>Alberta legit casinos</strong> — licensed, regulated, consumer-protected — will be the standard come mid-July.</p>
+
+    <div class="pull-quote">
+      "We have a fiduciary responsibility to all Albertans to make sure that when they gamble online, they can do so safely and in a more responsible fashion."
+      <cite>— Dale Nally, Minister of Service Alberta and Red Tape Reduction</cite>
+    </div>
+  </section>
+
+  <!-- WHAT'S CHANGING -->
+  <section id="whats-changing">
+    <h2>What's Changing on July 13, 2026</h2>
+    <p>Alberta's iGaming overhaul didn't happen overnight. It's the product of years of legislation, a new regulatory body, and a conscious decision to follow Ontario's lead — but with its own flavour.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🏛️</div>
+        <h3>The Dual-Agency Model</h3>
+        <p>AGLC handles licensing and compliance. The newly created Alberta iGaming Corporation (AiGC) manages market operations. Think of them as the referee and the league office, respectively.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔓</div>
+        <h3>Open Competition</h3>
+        <p>Unlike the current Play Alberta monopoly, regulated <strong>AB online casinos</strong> can now compete for your business. More choice, more accountability — with consumer protections baked in by law.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Grey Market Deadline</h3>
+        <p>July 13 is also the deadline for grey-market operators to file for licensing and pay all required fees to AGLC. Operators that miss it face enforcement. For players, this means unlicensed sites lose their ability to claim legitimacy.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:2rem;">Alberta iGaming Timeline</h3>
+    <ul class="timeline">
+      <li><span class="tl-year">2024</span> Bill 16 (Red Tape Reduction Statutes Amendment Act) restructures Alberta's gaming authority alongside AGLC</li>
+      <li><span class="tl-year">2025</span> Bill 48 (iGaming Alberta Act) passes — AiGC is officially created; the regulated market is set in motion</li>
+      <li><span class="tl-year">Early 2026</span> Operator and supplier registration opens; customer pre-registration begins with licensed brands</li>
+      <li><span class="tl-year">April 2026</span> July 13 launch date confirmed; ~30 operators registered, more in process</li>
+      <li><span class="tl-year">July 13, 2026</span> 🚀 Alberta's regulated iGaming and sports betting market goes live</li>
+    </ul>
+  </section>
+
+  <!-- REGISTERED OPERATORS -->
+  <section id="operators">
+    <h2>Who's Coming to Alberta Online Casinos</h2>
+    <p>Close to 30 operators registered ahead of the Alberta regulated launch, with more expected to finalize licensing before July 13. This is not a complete list — registration continues to move. These are the brands that have publicly confirmed or been widely reported as registered for the <strong>Alberta iGaming</strong> market:</p>
+
+    <div class="operator-grid">
+      <div class="operator-chip"><span class="dot"></span>Play Alberta</div>
+      <div class="operator-chip"><span class="dot"></span>BetMGM AB</div>
+      <div class="operator-chip"><span class="dot"></span>DraftKings Casino AB</div>
+      <div class="operator-chip"><span class="dot"></span>FanDuel Alberta</div>
+      <div class="operator-chip"><span class="dot"></span>BetRivers Alberta</div>
+      <div class="operator-chip"><span class="dot"></span>Caesars Casino AB</div>
+      <div class="operator-chip"><span class="dot"></span>Bally Bet AB</div>
+      <div class="operator-chip"><span class="dot"></span>Horseshoe Online Casino</div>
+      <div class="operator-chip"><span class="dot"></span>Monopoly Casino &amp; Sportsbook</div>
+      <div class="operator-chip"><span class="dot"></span>Jackpot City Alberta</div>
+      <div class="operator-chip"><span class="dot"></span>Spin Casino Alberta</div>
+      <div class="operator-chip"><span class="dot"></span>Ruby Fortune Alberta</div>
+      <div class="operator-chip"><span class="dot"></span>Royal Vegas AB</div>
+      <div class="operator-chip"><span class="dot"></span>PointsBet AB</div>
+      <div class="operator-chip"><span class="dot"></span>Tooniebet Alberta</div>
+      <div class="operator-chip"><span class="dot"></span>Betway AB</div>
+      <div class="operator-chip"><span class="dot"></span>BetNova AB</div>
+      <div class="operator-chip"><span class="dot"></span>Sports Interaction AB</div>
+    </div>
+
+    <p style="margin-top:1.25rem; font-size:0.85rem; color:var(--secondary);">Registration status and operator list sourced from public reports as of June 2026. Verify directly with <a href="https://abigaming.ca" target="_blank" rel="noopener">AiGC (abigaming.ca)</a> or <a href="https://aglc.ca" target="_blank" rel="noopener">AGLC (aglc.ca)</a> for the most current licensing information.</p>
+  </section>
+
+  <!-- NEWS & RESOURCES -->
+  <section id="news">
+    <h2>Alberta iGaming News &amp; Resources</h2>
+    <p>The regulated Alberta market is moving fast. Here's where to stay current — from official sources to industry deep-dives and editorial coverage worth your time.</p>
+
+    <ul class="news-list">
+      <li>
+        <span class="news-type">News</span>
+        <div class="news-content">
+          <a href="https://pokerfuse.com/latest-news/2026/4/regulated-igaming-alberta-will-open-on-july-13/" target="_blank" rel="noopener">Regulated iGaming in Alberta Will Open on July 13</a>
+          <div class="news-meta">Pokerfuse · April 7, 2026 — Confirmation of the launch date with operator registration context</div>
+        </div>
+      </li>
+      <li>
+        <span class="news-type">News</span>
+        <div class="news-content">
+          <a href="https://www.gamingintelligence.com/legal/228611-canadas-alberta-to-open-regulated-igaming-market-on-july-13/" target="_blank" rel="noopener">Canada: Alberta to Open Regulated iGaming Market on July 13</a>
+          <div class="news-meta">Gaming Intelligence · April 1, 2026 — Trade coverage of the confirmed date and regulatory framework</div>
+        </div>
+      </li>
+      <li>
+        <span class="news-type">News</span>
+        <div class="news-content">
+          <a href="https://www.covers.com/industry/alberta-customer-pre-registration-begin-sports-betting-igaming-february-2026" target="_blank" rel="noopener">Starting Gun Fired in Alberta's iGaming Customer-Acquisition Race</a>
+          <div class="news-meta">Covers.com · February 3, 2026 — Pre-registration begins; the marketing race is underway</div>
+        </div>
+      </li>
+      <li>
+        <span class="news-type">News</span>
+        <div class="news-content">
+          <a href="https://www.oddsshark.com/industry-news/alberta-igaming-potential-summer-launch" target="_blank" rel="noopener">Alberta iGaming Looking at 2026 Summer Launch</a>
+          <div class="news-meta">Odds Shark · February 26, 2026 — Early timeline reporting before the official date was set</div>
+        </div>
+      </li>
+      <li>
+        <span class="news-type video">Video</span>
+        <div class="news-content">
+          <a href="https://www.youtube.com/watch?v=hMxBFvs9tXk" target="_blank" rel="noopener">Alberta's Path to Regulated iGaming — AiGC's Dan Keene</a>
+          <div class="news-meta">YouTube · March 1, 2026 — AiGC's Dan Keene in conversation on the mechanics and vision of the Alberta market</div>
+        </div>
+      </li>
+      <li>
+        <span class="news-type video">Video</span>
+        <div class="news-content">
+          <a href="https://www.youtube.com/watch?v=AZTjHSO9PSg" target="_blank" rel="noopener">Alberta Is Canada's Next Gaming Chapter — Gaming News Canada</a>
+          <div class="news-meta">YouTube / Gaming News Canada · April 12, 2026 — Broader context on what Alberta's market means for the national iGaming picture</div>
+        </div>
+      </li>
+      <li>
+        <span class="news-type">News</span>
+        <div class="news-content">
+          <a href="https://www.casino.org/news/canadian-gaming-alberta-market-launch-3/" target="_blank" rel="noopener">Is Mid July the Target for Alberta's Market Launch?</a>
+          <div class="news-meta">Casino.org · March 26, 2026 — Grey-market operator deadline coverage and licensing fee context</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- LAND-BASED -->
+  <section id="land-based">
+    <h2>Alberta's Best Land-Based Casinos</h2>
+    <p>Online or off — Alberta has a serious casino culture. With 21+ licensed venues across the province, from First Nations resort properties to 24-hour city casinos, there's no shortage of options if you prefer the floor to the screen. Here's a quick look at the top two venues in Alberta's major cities.</p>
+
+    <!-- CALGARY -->
+    <div class="city-block">
+      <div class="city-label">📍 Calgary</div>
+      <div class="casino-cards">
+        <div class="casino-card">
+          <h3>Grey Eagle Resort &amp; Casino</h3>
+          <div class="casino-meta">1,000+ slots · 31 tables · Poker room · Hotel · 2,400-seat venue</div>
+          <p>Alberta's most ambitious casino resort — operated by the Tsuut'ina Nation and genuinely impressive in scope. Gaming, hospitality, live entertainment, and a smoking-permitted floor that's unique in the province. This is the Calgary casino to beat.</p>
+        </div>
+        <div class="casino-card">
+          <h3>PURE Casino Calgary</h3>
+          <div class="casino-meta">850+ slots · 30 tables · Poker room · Replay Arena · 24/7</div>
+          <p>One of four Alberta PURE properties from Canada's oldest casino operator. The poker room is consistently strong, the Replay Arena adds an entertainment layer, and the 24/7 doors mean you play on your schedule, not theirs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDMONTON -->
+    <div class="city-block">
+      <div class="city-label">📍 Edmonton</div>
+      <div class="casino-cards">
+        <div class="casino-card">
+          <h3>River Cree Resort &amp; Casino</h3>
+          <div class="casino-meta">~1,355 slots · 54 tables · Poker room · 249-room hotel · Indoor pool</div>
+          <p>Operated by the Enoch Cree Nation, River Cree is the largest casino resort in the Edmonton area — and by most measures the closest thing to a Vegas resort experience Alberta has to offer. The scale and facilities are genuinely impressive.</p>
+        </div>
+        <div class="casino-card">
+          <h3>Starlight Casino Edmonton</h3>
+          <div class="casino-meta">768 slots · 32 tables · Poker room · Multiple dining options</div>
+          <p>Situated inside West Edmonton Mall — the world's fifth-largest — Starlight punches well above its square footage. Halley's Club speakeasy supper club, the Replay Arena, and full table action make this an easy full-day destination inside the mall complex.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RED DEER -->
+    <div class="city-block">
+      <div class="city-label">📍 Red Deer</div>
+      <div class="casino-cards">
+        <div class="casino-card">
+          <h3>Red Deer Resort &amp; Casino</h3>
+          <div class="casino-meta">Full resort · Gaming floor · Hotel · Dining</div>
+          <p>Perfectly placed halfway between Calgary and Edmonton on the QEII corridor, Red Deer Resort &amp; Casino is the obvious stop for central Alberta players. A full resort package with gaming, hotel, and dining — and none of the city-centre congestion.</p>
+        </div>
+        <div class="casino-card">
+          <h3>Stoney Nakoda Resort &amp; Casino</h3>
+          <div class="casino-meta">Rocky Mountain foothills · 45 min from Banff</div>
+          <p>Worth noting even if it's technically closer to Calgary's orbit: this First Nations resort in the foothills is unlike any other gaming venue in the province. The setting alone — right on the edge of the Rockies — makes it a destination rather than a detour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESPONSIBLE GAMBLING -->
+  <section id="responsible">
+    <h2>Play Alberta — and Play Responsibly</h2>
+    <p>The regulated market exists, in part, because online gambling happens whether it's regulated or not. Bringing it under a proper framework means real consumer protections: self-exclusion tools, deposit limits, transparency on odds, and a place to report problems. That's not marketing copy — that's the actual mechanism.</p>
+
+    <div class="rg-box">
+      <span class="rg-icon">🛟</span>
+      <div>
+        <strong>Need support?</strong> The <a href="https://aglc.ca/responsible-gambling" target="_blank" rel="noopener">AGLC Responsible Gambling program</a> offers resources, tools, and connections to support services for Albertans. You can also reach the Problem Gambling Helpline at <strong>1-800-522-4700</strong> (available 24/7, confidential, free).
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+  <p><strong>iGaming Alberta</strong> — igamingalberta.ca</p>
+  <p>An independent information resource. We are not affiliated with AGLC, AiGC, or any licensed operator.</p>
+  <p>Information on this page is provided for editorial purposes. Always verify operator licensing status directly with <a href="https://abigaming.ca" target="_blank" rel="noopener">AiGC</a> or <a href="https://aglc.ca" target="_blank" rel="noopener">AGLC</a>.</p>
+  <p style="margin-top:0.75rem; color:#666;">🌾 Alberta · 18+ only · Gamble responsibly</p>
+</footer>
+
+</body>
+</html>

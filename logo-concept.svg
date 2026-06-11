@@ -1,0 +1,24 @@
+<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="420" height="120" fill="#2C2C2C" rx="6"/>
+
+  <!-- Mountain shape (stylized AB Rockies) -->
+  <!-- Left mountain -->
+  <polyline points="30,85 52,42 68,62 88,32 108,85" 
+    fill="none" stroke="#E8722A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Mountain fill hint -->
+  <polygon points="30,85 52,42 68,62 88,32 108,85" fill="#E8722A" opacity="0.10"/>
+  <!-- Peak dot -->
+  <circle cx="88" cy="32" r="4" fill="#E8722A"/>
+  <!-- Ground line -->
+  <line x1="18" y1="88" x2="120" y2="88" stroke="#E8722A" stroke-width="2" opacity="0.6"/>
+
+  <!-- Word mark -->
+  <!-- iGaming in accent orange -->
+  <text x="136" y="66" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#E8722A" letter-spacing="-0.5">iGaming</text>
+  <!-- Alberta in white -->
+  <text x="136" y="96" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" letter-spacing="6">ALBERTA</text>
+
+  <!-- Tagline -->
+  <text x="138" y="110" font-family="Arial, sans-serif" font-size="9.5" fill="#9E9E8F" letter-spacing="2">REGULATED PLAY GUIDE</text>
+</svg>
