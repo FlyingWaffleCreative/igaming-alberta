@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iGaming Alberta — Alberta Online Casinos, Regulated Market Guide 2026</title>
+  <title>iGaming Alberta - Alberta Online Casinos, Regulated Market Guide 2026</title>
   <meta name="description" content="Your authoritative guide to Alberta online casinos, the July 13 regulated iGaming launch, licensed AB casino operators, and Alberta's best land-based venues by city." />
   <meta name="keywords" content="Alberta online casinos, AB online casinos, Play Alberta, Alberta casinos, Alberta legit casinos, best AB casino, iGaming Alberta, Alberta regulated gambling" />
 
@@ -101,7 +101,7 @@
 
     /* ── HERO ────────────────────────────────────────────── */
     .hero {
-      background: linear-gradient(150deg, #1C4A2E 0%, #245C3A 55%, #1a3d28 100%);
+      background: linear-gradient(150deg, rgba(28,74,46,0.88) 0%, rgba(36,92,58,0.82) 55%, rgba(26,61,40,0.92) 100%), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80') center/cover no-repeat;
       padding: 4rem 2rem;
       text-align: center;
       position: relative;
@@ -134,17 +134,98 @@
       font-family: Arial, sans-serif;
     }
 
-    .launch-badge {
+    /* ── LAUNCH COUNTDOWN ──────────────────────────────── */
+    .launch-countdown {
       display: inline-block;
-      background: var(--accent-bright);
+      background: rgba(255,255,255,0.08);
+      border: 2px solid var(--accent-bright);
+      border-radius: 8px;
+      padding: 1rem 2.5rem;
+      margin-top: 0.75rem;
+    }
+    .countdown-label {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-bright);
+      margin-bottom: 0.2rem;
+    }
+    .countdown-number {
+      font-family: 'Georgia', serif;
+      font-size: 3.6rem;
+      font-weight: bold;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .countdown-sub {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      color: #BCBCB0;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── PLAY INTRO ──────────────────────────────────────── */
+    .play-intro-wrap {
+      max-width: 1100px;
+      margin: 2.5rem auto 0;
+      padding: 0 2rem;
+    }
+    .play-intro-wrap h2 {
+      font-size: 1.6rem;
       color: var(--accent-dark);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: normal;
+    }
+    .play-intro-wrap p {
+      font-family: Arial, sans-serif;
+      font-size: 0.97rem;
+      color: var(--text);
+      max-width: 820px;
+    }
+
+    /* ── REDDIT SECTION ──────────────────────────────────── */
+    .reddit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .reddit-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--accent-dark);
+      transition: background 0.15s;
+    }
+    .reddit-card:hover {
+      background: #d8e8dc;
+      text-decoration: none;
+    }
+    .reddit-card-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .reddit-card-name {
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .reddit-card-desc {
       font-family: Arial, sans-serif;
       font-size: 0.8rem;
-      font-weight: bold;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.4rem 1.2rem;
-      border-radius: 2px;
+      color: var(--secondary);
+      display: block;
     }
 
     /* ── OVERVIEW BOX ────────────────────────────────────── */
@@ -480,15 +561,43 @@
     <a href="#operators">Operators</a>
     <a href="#news">News</a>
     <a href="#land-based">Land-Based</a>
+    <a href="#reddit">Reddit</a>
   </nav>
 </header>
 
 <!-- ── HERO ────────────────────────────────────────────── -->
 <section class="hero">
-  <h1>Alberta Online Casinos:<br><span>The Regulated Era Starts July 13</span></h1>
-  <p>What you actually need to know about Alberta's new iGaming market — who's licensed, what changes, and where to play responsibly.</p>
-  <span class="launch-badge">⚡ Launch: July 13, 2026</span>
+  <h1>Alberta Online Casinos:<br><span>The regulated era starts July 13</span></h1>
+  <p>What you actually need to know about Alberta's new iGaming market: who's licensed, what changes, and where to play responsibly.</p>
+  <div class="launch-countdown">
+    <div class="countdown-label">🚀 Days til Launch</div>
+    <div class="countdown-number" id="daysLeft">--</div>
+    <div class="countdown-sub" id="countdownSub">July 13, 2026</div>
+  </div>
+  <script>
+  (function() {
+    var launch = new Date('2026-07-13T00:00:00-06:00');
+    var now = new Date();
+    var diff = launch - now;
+    var el = document.getElementById('daysLeft');
+    var sub = document.getElementById('countdownSub');
+    if (diff > 0) {
+      var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+      el.textContent = days;
+      sub.textContent = 'days until July 13, 2026';
+    } else {
+      el.textContent = 'LIVE';
+      sub.textContent = 'Alberta iGaming is now open';
+    }
+  })();
+  </script>
 </section>
+
+<!-- ── PLAY ALBERTA INTRO ───────────────────────────────── -->
+<div class="play-intro-wrap">
+  <h2>Play Alberta Casinos</h2>
+  <p>Alberta's iGaming market is changing. What was once an offshore online casino option-rich market is going private, similar to Ontario's model. We're here to help guide you through these changes and help you find the best legit AB online casino.</p>
+</div>
 
 <!-- ── OVERVIEW BOX ────────────────────────────────────── -->
 <div class="overview-wrap">
@@ -503,7 +612,10 @@
     </div>
     <div class="overview-item">
       <div class="overview-label">Regulator</div>
-      <div class="overview-value">AGLC + AiGC</div>
+      <div class="overview-value" style="font-size:0.82rem; line-height:1.7; font-weight:normal;">
+        <a href="https://aglc.ca" target="_blank" rel="noopener" style="font-weight:bold;">Alberta Gaming, Liquor and Cannabis Commission (AGLC)</a><br>
+        <a href="https://abigaming.ca" target="_blank" rel="noopener" style="font-weight:bold;">Alberta iGaming Corporation (AiGC)</a>
+      </div>
     </div>
     <div class="overview-item">
       <div class="overview-label">Regulated Operators</div>
@@ -526,19 +638,19 @@
   <!-- INTRO -->
   <section id="about">
     <h2>Alberta Casinos Online: A Turning Point</h2>
-    <p>Alberta isn't just dipping a toe in. On July 13, 2026, the province throws the doors open to a fully regulated online casino and sports betting market — only the second province in Canada to do it after Ontario. If you've been playing on grey-market sites, or sticking strictly to Play Alberta, things are about to change considerably.</p>
-    <p>This page exists to cut through the noise. We're not here to steer you toward a particular operator. We're here to explain what's actually happening, who's involved, what it means for Albertans, and where the reliable information lives. <strong>Alberta legit casinos</strong> — licensed, regulated, consumer-protected — will be the standard come mid-July.</p>
+    <p>Alberta isn't just dipping a toe in. On July 13, 2026, the province throws the doors open to a fully regulated online casino and sports betting market - only the second province in Canada to do it after Ontario. If you've been playing on grey-market sites, or sticking strictly to Play Alberta, things are about to change considerably.</p>
+    <p>This page exists to cut through the noise. We're not here to steer you toward a particular operator. We're here to explain what's actually happening, who's involved, what it means for Albertans, and where the reliable information lives. <strong>Alberta legit casinos</strong> - licensed, regulated, consumer-protected - will be the standard come mid-July.</p>
 
     <div class="pull-quote">
       "We have a fiduciary responsibility to all Albertans to make sure that when they gamble online, they can do so safely and in a more responsible fashion."
-      <cite>— Dale Nally, Minister of Service Alberta and Red Tape Reduction</cite>
+      <cite>- Dale Nally, Minister of Service Alberta and Red Tape Reduction</cite>
     </div>
   </section>
 
   <!-- WHAT'S CHANGING -->
   <section id="whats-changing">
     <h2>What's Changing on July 13, 2026</h2>
-    <p>Alberta's iGaming overhaul didn't happen overnight. It's the product of years of legislation, a new regulatory body, and a conscious decision to follow Ontario's lead — but with its own flavour.</p>
+    <p>Alberta's iGaming overhaul didn't happen overnight. It's the product of years of legislation, a new regulatory body, and a conscious decision to follow Ontario's lead - but with its own flavour.</p>
 
     <div class="card-grid">
       <div class="card">
@@ -549,7 +661,7 @@
       <div class="card">
         <div class="card-icon">🔓</div>
         <h3>Open Competition</h3>
-        <p>Unlike the current Play Alberta monopoly, regulated <strong>AB online casinos</strong> can now compete for your business. More choice, more accountability — with consumer protections baked in by law.</p>
+        <p>Unlike the current Play Alberta monopoly, regulated <strong>AB online casinos</strong> can now compete for your business. More choice, more accountability - with consumer protections baked in by law.</p>
       </div>
       <div class="card">
         <div class="card-icon">🛡️</div>
@@ -561,7 +673,7 @@
     <h3 style="margin-top:2rem;">Alberta iGaming Timeline</h3>
     <ul class="timeline">
       <li><span class="tl-year">2024</span> Bill 16 (Red Tape Reduction Statutes Amendment Act) restructures Alberta's gaming authority alongside AGLC</li>
-      <li><span class="tl-year">2025</span> Bill 48 (iGaming Alberta Act) passes — AiGC is officially created; the regulated market is set in motion</li>
+      <li><span class="tl-year">2025</span> Bill 48 (iGaming Alberta Act) passes - AiGC is officially created; the regulated market is set in motion</li>
       <li><span class="tl-year">Early 2026</span> Operator and supplier registration opens; customer pre-registration begins with licensed brands</li>
       <li><span class="tl-year">April 2026</span> July 13 launch date confirmed; ~30 operators registered, more in process</li>
       <li><span class="tl-year">July 13, 2026</span> 🚀 Alberta's regulated iGaming and sports betting market goes live</li>
@@ -571,7 +683,7 @@
   <!-- REGISTERED OPERATORS -->
   <section id="operators">
     <h2>Who's Coming to Alberta Online Casinos</h2>
-    <p>Close to 30 operators registered ahead of the Alberta regulated launch, with more expected to finalize licensing before July 13. This is not a complete list — registration continues to move. These are the brands that have publicly confirmed or been widely reported as registered for the <strong>Alberta iGaming</strong> market:</p>
+    <p>Close to 30 operators registered ahead of the Alberta regulated launch, with more expected to finalize licensing before July 13. This is not a complete list - registration continues to move. These are the brands that have publicly confirmed or been widely reported as registered for the <strong>Alberta iGaming</strong> market:</p>
 
     <div class="operator-grid">
       <div class="operator-chip"><span class="dot"></span>Play Alberta</div>
@@ -600,56 +712,56 @@
   <!-- NEWS & RESOURCES -->
   <section id="news">
     <h2>Alberta iGaming News &amp; Resources</h2>
-    <p>The regulated Alberta market is moving fast. Here's where to stay current — from official sources to industry deep-dives and editorial coverage worth your time.</p>
+    <p>The regulated Alberta market is moving fast. Here's where to stay current - from official sources to industry deep-dives and editorial coverage worth your time.</p>
 
     <ul class="news-list">
       <li>
         <span class="news-type">News</span>
         <div class="news-content">
           <a href="https://pokerfuse.com/latest-news/2026/4/regulated-igaming-alberta-will-open-on-july-13/" target="_blank" rel="noopener">Regulated iGaming in Alberta Will Open on July 13</a>
-          <div class="news-meta">Pokerfuse · April 7, 2026 — Confirmation of the launch date with operator registration context</div>
+          <div class="news-meta">Pokerfuse · April 7, 2026 - Confirmation of the launch date with operator registration context</div>
         </div>
       </li>
       <li>
         <span class="news-type">News</span>
         <div class="news-content">
           <a href="https://www.gamingintelligence.com/legal/228611-canadas-alberta-to-open-regulated-igaming-market-on-july-13/" target="_blank" rel="noopener">Canada: Alberta to Open Regulated iGaming Market on July 13</a>
-          <div class="news-meta">Gaming Intelligence · April 1, 2026 — Trade coverage of the confirmed date and regulatory framework</div>
+          <div class="news-meta">Gaming Intelligence · April 1, 2026 - Trade coverage of the confirmed date and regulatory framework</div>
         </div>
       </li>
       <li>
         <span class="news-type">News</span>
         <div class="news-content">
           <a href="https://www.covers.com/industry/alberta-customer-pre-registration-begin-sports-betting-igaming-february-2026" target="_blank" rel="noopener">Starting Gun Fired in Alberta's iGaming Customer-Acquisition Race</a>
-          <div class="news-meta">Covers.com · February 3, 2026 — Pre-registration begins; the marketing race is underway</div>
+          <div class="news-meta">Covers.com · February 3, 2026 - Pre-registration begins; the marketing race is underway</div>
         </div>
       </li>
       <li>
         <span class="news-type">News</span>
         <div class="news-content">
           <a href="https://www.oddsshark.com/industry-news/alberta-igaming-potential-summer-launch" target="_blank" rel="noopener">Alberta iGaming Looking at 2026 Summer Launch</a>
-          <div class="news-meta">Odds Shark · February 26, 2026 — Early timeline reporting before the official date was set</div>
+          <div class="news-meta">Odds Shark · February 26, 2026 - Early timeline reporting before the official date was set</div>
         </div>
       </li>
       <li>
         <span class="news-type video">Video</span>
         <div class="news-content">
-          <a href="https://www.youtube.com/watch?v=hMxBFvs9tXk" target="_blank" rel="noopener">Alberta's Path to Regulated iGaming — AiGC's Dan Keene</a>
-          <div class="news-meta">YouTube · March 1, 2026 — AiGC's Dan Keene in conversation on the mechanics and vision of the Alberta market</div>
+          <a href="https://www.youtube.com/watch?v=hMxBFvs9tXk" target="_blank" rel="noopener">Alberta's Path to Regulated iGaming - AiGC's Dan Keene</a>
+          <div class="news-meta">YouTube · March 1, 2026 - AiGC's Dan Keene in conversation on the mechanics and vision of the Alberta market</div>
         </div>
       </li>
       <li>
         <span class="news-type video">Video</span>
         <div class="news-content">
-          <a href="https://www.youtube.com/watch?v=AZTjHSO9PSg" target="_blank" rel="noopener">Alberta Is Canada's Next Gaming Chapter — Gaming News Canada</a>
-          <div class="news-meta">YouTube / Gaming News Canada · April 12, 2026 — Broader context on what Alberta's market means for the national iGaming picture</div>
+          <a href="https://www.youtube.com/watch?v=AZTjHSO9PSg" target="_blank" rel="noopener">Alberta Is Canada's Next Gaming Chapter - Gaming News Canada</a>
+          <div class="news-meta">YouTube / Gaming News Canada · April 12, 2026 - Broader context on what Alberta's market means for the national iGaming picture</div>
         </div>
       </li>
       <li>
         <span class="news-type">News</span>
         <div class="news-content">
           <a href="https://www.casino.org/news/canadian-gaming-alberta-market-launch-3/" target="_blank" rel="noopener">Is Mid July the Target for Alberta's Market Launch?</a>
-          <div class="news-meta">Casino.org · March 26, 2026 — Grey-market operator deadline coverage and licensing fee context</div>
+          <div class="news-meta">Casino.org · March 26, 2026 - Grey-market operator deadline coverage and licensing fee context</div>
         </div>
       </li>
     </ul>
@@ -658,7 +770,7 @@
   <!-- LAND-BASED -->
   <section id="land-based">
     <h2>Alberta's Best Land-Based Casinos</h2>
-    <p>Online or off — Alberta has a serious casino culture. With 21+ licensed venues across the province, from First Nations resort properties to 24-hour city casinos, there's no shortage of options if you prefer the floor to the screen. Here's a quick look at the top two venues in Alberta's major cities.</p>
+    <p>Online or off - Alberta has a serious casino culture. With 21+ licensed venues across the province, from First Nations resort properties to 24-hour city casinos, there's no shortage of options if you prefer the floor to the screen. Here's a quick look at the top two venues in Alberta's major cities.</p>
 
     <!-- CALGARY -->
     <div class="city-block">
@@ -667,7 +779,7 @@
         <div class="casino-card">
           <h3>Grey Eagle Resort &amp; Casino</h3>
           <div class="casino-meta">1,000+ slots · 31 tables · Poker room · Hotel · 2,400-seat venue</div>
-          <p>Alberta's most ambitious casino resort — operated by the Tsuut'ina Nation and genuinely impressive in scope. Gaming, hospitality, live entertainment, and a smoking-permitted floor that's unique in the province. This is the Calgary casino to beat.</p>
+          <p>Alberta's most ambitious casino resort - operated by the Tsuut'ina Nation and genuinely impressive in scope. Gaming, hospitality, live entertainment, and a smoking-permitted floor that's unique in the province. This is the Calgary casino to beat.</p>
         </div>
         <div class="casino-card">
           <h3>PURE Casino Calgary</h3>
@@ -684,12 +796,12 @@
         <div class="casino-card">
           <h3>River Cree Resort &amp; Casino</h3>
           <div class="casino-meta">~1,355 slots · 54 tables · Poker room · 249-room hotel · Indoor pool</div>
-          <p>Operated by the Enoch Cree Nation, River Cree is the largest casino resort in the Edmonton area — and by most measures the closest thing to a Vegas resort experience Alberta has to offer. The scale and facilities are genuinely impressive.</p>
+          <p>Operated by the Enoch Cree Nation, River Cree is the largest casino resort in the Edmonton area - and by most measures the closest thing to a Vegas resort experience Alberta has to offer. The scale and facilities are genuinely impressive.</p>
         </div>
         <div class="casino-card">
           <h3>Starlight Casino Edmonton</h3>
           <div class="casino-meta">768 slots · 32 tables · Poker room · Multiple dining options</div>
-          <p>Situated inside West Edmonton Mall — the world's fifth-largest — Starlight punches well above its square footage. Halley's Club speakeasy supper club, the Replay Arena, and full table action make this an easy full-day destination inside the mall complex.</p>
+          <p>Situated inside West Edmonton Mall - the world's fifth-largest - Starlight punches well above its square footage. Halley's Club speakeasy supper club, the Replay Arena, and full table action make this an easy full-day destination inside the mall complex.</p>
         </div>
       </div>
     </div>
@@ -701,21 +813,50 @@
         <div class="casino-card">
           <h3>Red Deer Resort &amp; Casino</h3>
           <div class="casino-meta">Full resort · Gaming floor · Hotel · Dining</div>
-          <p>Perfectly placed halfway between Calgary and Edmonton on the QEII corridor, Red Deer Resort &amp; Casino is the obvious stop for central Alberta players. A full resort package with gaming, hotel, and dining — and none of the city-centre congestion.</p>
+          <p>Perfectly placed halfway between Calgary and Edmonton on the QEII corridor, Red Deer Resort &amp; Casino is the obvious stop for central Alberta players. A full resort package with gaming, hotel, and dining - and none of the city-centre congestion.</p>
         </div>
         <div class="casino-card">
           <h3>Stoney Nakoda Resort &amp; Casino</h3>
           <div class="casino-meta">Rocky Mountain foothills · 45 min from Banff</div>
-          <p>Worth noting even if it's technically closer to Calgary's orbit: this First Nations resort in the foothills is unlike any other gaming venue in the province. The setting alone — right on the edge of the Rockies — makes it a destination rather than a detour.</p>
+          <p>Worth noting even if it's technically closer to Calgary's orbit: this First Nations resort in the foothills is unlike any other gaming venue in the province. The setting alone - right on the edge of the Rockies - makes it a destination rather than a detour.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- REDDIT -->
+  <section id="reddit">
+    <h2>Alberta Reddit – What Players are Saying</h2>
+    <p>Some of the most candid takes on Alberta's regulated iGaming launch are coming from players themselves. These subreddits are where Albertans are asking questions, sharing experiences, and cutting through the operator marketing spin. Worth bookmarking.</p>
+    <div class="reddit-grid">
+      <a href="https://www.reddit.com/r/AlbertaGambling/" target="_blank" rel="noopener" class="reddit-card">
+        <span class="reddit-card-icon">🎰</span>
+        <span>
+          <span class="reddit-card-name">r/AlbertaGambling</span>
+          <span class="reddit-card-desc">Alberta-specific gambling discussion, operator reviews, and iGaming market news</span>
+        </span>
+      </a>
+      <a href="https://www.reddit.com/r/CalgaryFunWithCards/" target="_blank" rel="noopener" class="reddit-card">
+        <span class="reddit-card-icon">🃏</span>
+        <span>
+          <span class="reddit-card-name">r/CalgaryFunWithCards</span>
+          <span class="reddit-card-desc">Calgary poker and casino community with local game listings and reviews</span>
+        </span>
+      </a>
+      <a href="https://www.reddit.com/r/Alberta/" target="_blank" rel="noopener" class="reddit-card">
+        <span class="reddit-card-icon">🌾</span>
+        <span>
+          <span class="reddit-card-name">r/Alberta</span>
+          <span class="reddit-card-desc">The main Alberta subreddit, where iGaming topics regularly surface around major news</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
   <!-- RESPONSIBLE GAMBLING -->
   <section id="responsible">
-    <h2>Play Alberta — and Play Responsibly</h2>
-    <p>The regulated market exists, in part, because online gambling happens whether it's regulated or not. Bringing it under a proper framework means real consumer protections: self-exclusion tools, deposit limits, transparency on odds, and a place to report problems. That's not marketing copy — that's the actual mechanism.</p>
+    <h2>Play Alberta - and Play Responsibly</h2>
+    <p>The regulated market exists, in part, because online gambling happens whether it's regulated or not. Bringing it under a proper framework means real consumer protections: self-exclusion tools, deposit limits, transparency on odds, and a place to report problems. That's not marketing copy - that's the actual mechanism.</p>
 
     <div class="rg-box">
       <span class="rg-icon">🛟</span>
@@ -729,7 +870,7 @@
 
 <!-- ── FOOTER ──────────────────────────────────────────── -->
 <footer>
-  <p><strong>iGaming Alberta</strong> — igamingalberta.ca</p>
+  <p><strong>iGaming Alberta</strong> - igamingalberta.ca</p>
   <p>An independent information resource. We are not affiliated with AGLC, AiGC, or any licensed operator.</p>
   <p>Information on this page is provided for editorial purposes. Always verify operator licensing status directly with <a href="https://abigaming.ca" target="_blank" rel="noopener">AiGC</a> or <a href="https://aglc.ca" target="_blank" rel="noopener">AGLC</a>.</p>
   <p style="margin-top:0.75rem; color:#666;">🌾 Alberta · 18+ only · Gamble responsibly</p>
