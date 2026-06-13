@@ -115,6 +115,23 @@
       overflow: hidden;
     }
 
+    .hero-cowboy {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      max-height: 420px;
+      width: auto;
+      opacity: 0.55;
+      pointer-events: none;
+      mask-image: linear-gradient(to left, rgba(0,0,0,0.9) 40%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.9) 40%, transparent 100%);
+    }
+
+    @media (max-width: 768px) {
+      .hero-cowboy { display: none; }
+    }
+
     .hero::before {
       content: '';
       position: absolute;
@@ -581,6 +598,7 @@
 
 <!-- ── HERO ────────────────────────────────────────────── -->
 <section class="hero">
+  <img src="hero-cowboy.png" alt="" class="hero-cowboy" aria-hidden="true">
   <h1>Alberta Online Casinos:<br><span class="hero-sub">The regulated era starts July 13</span></h1>
   <p>What you actually need to know about Alberta's new iGaming market: who's licensed, what changes, and where to play responsibly.</p>
   <div class="launch-countdown">
