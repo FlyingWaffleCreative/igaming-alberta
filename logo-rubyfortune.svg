@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" width="160" height="60">
+  <defs>
+    <linearGradient id="rfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000"/>
+      <stop offset="100%" style="stop-color:#C0143C"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="60" rx="6" fill="url(#rfBg)"/>
+  <text x="80" y="24" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#F5C842" text-anchor="middle" letter-spacing="0.5">RUBY</text>
+  <text x="80" y="40" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">FORTUNE</text>
+  <text x="80" y="53" font-family="Arial, sans-serif" font-size="7" fill="#FFB3C1" text-anchor="middle" letter-spacing="1">CASINO</text>
+</svg>
