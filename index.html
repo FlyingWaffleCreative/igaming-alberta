@@ -424,12 +424,19 @@
     .table-wrap thead th { padding: 0.85rem 1rem; text-align: left; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
     .table-wrap tbody tr:nth-child(even) { background: var(--bg-alt); }
     .table-wrap tbody tr:hover { background: var(--green-dim); }
-    .table-wrap tbody td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; color: var(--text); }
+    .table-wrap tbody td { padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--border); vertical-align: middle; color: var(--text); }
+    .table-wrap tbody td:first-child { text-align: center; }
 
-    .rank-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; font-weight: 700; font-size: 0.85rem; background: var(--border); color: var(--text); }
+    .rank-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px;
+      font-weight: 800; font-size: 1.15rem; font-family: var(--font-display);
+      background: var(--border); color: var(--text);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
     .rank-badge.gold { background: var(--yellow); color: var(--green); }
-    .rank-badge.silver { background: #9E9E9E; color: #fff; }
-    .rank-badge.bronze { background: #C27C44; color: #fff; }
+    .rank-badge.silver { background: #C0C0C0; color: #333; }
+    .rank-badge.bronze { background: #CD7F32; color: #fff; }
 
     .casino-name-cell { font-weight: 700; color: var(--green); font-family: var(--font-display); }
     .stars { color: var(--red); letter-spacing: -1px; font-size: 1.05rem; }
@@ -792,7 +799,7 @@
         <tbody>
           <tr>
             <td><span class="rank-badge gold">1</span></td>
-            <td <td><img src="logos/jackpotcity.jpg" alt="Jackpot City" style="height:28px;width:auto;border-radius:4px;vertical-align:middle;"></td>
+            <td><img src="logos/jackpotcity.jpg" alt="Jackpot City" style="height:44px;width:auto;border-radius:6px;vertical-align:middle;"></td>
             <td><span class="stars">★★★★★</span></td>
             <td>Slots & Mobile App</td>
             <td>1,500+</td>
@@ -803,7 +810,7 @@
           </tr>
           <tr>
             <td><span class="rank-badge silver">2</span></td>
-            <td <td><img src="logos/draftkings.jpg" alt="DraftKings" style="height:28px;width:auto;border-radius:4px;vertical-align:middle;"></td>
+            <td><img src="logos/draftkings.jpg" alt="DraftKings" style="height:44px;width:auto;border-radius:6px;vertical-align:middle;"></td>
             <td><span class="stars">★★★★★</span></td>
             <td>Sports + Casino</td>
             <td>500+</td>
@@ -814,7 +821,7 @@
           </tr>
           <tr>
             <td><span class="rank-badge bronze">3</span></td>
-            <td <td><img src="logos/betmgm.jpg" alt="BetMGM" style="height:28px;width:auto;border-radius:4px;vertical-align:middle;"></td>
+            <td><img src="logos/betmgm.jpg" alt="BetMGM" style="height:44px;width:auto;border-radius:6px;vertical-align:middle;"></td>
             <td><span class="stars">★★★★★</span></td>
             <td>Biggest Game Library</td>
             <td>9,500+</td>
@@ -825,7 +832,7 @@
           </tr>
           <tr>
             <td><span class="rank-badge">4</span></td>
-            <td <td><img src="logos/bet365.jpg" alt="bet365" style="height:28px;width:auto;border-radius:4px;vertical-align:middle;"></td>
+            <td><img src="logos/bet365.jpg" alt="bet365" style="height:44px;width:auto;border-radius:6px;vertical-align:middle;"></td>
             <td><span class="stars">★★★★½</span></td>
             <td>Live Betting & Streaming</td>
             <td>400+ live events</td>
@@ -836,7 +843,7 @@
           </tr>
           <tr>
             <td><span class="rank-badge">5</span></td>
-            <td <td><img src="logos/spincasino.jpg" alt="Spin Casino" style="height:28px;width:auto;border-radius:4px;vertical-align:middle;"></td>
+            <td><img src="logos/spincasino.jpg" alt="Spin Casino" style="height:44px;width:auto;border-radius:6px;vertical-align:middle;"></td>
             <td><span class="stars">★★★★½</span></td>
             <td>Live Dealer Tables</td>
             <td>700+</td>
