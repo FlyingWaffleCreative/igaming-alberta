@@ -707,6 +707,108 @@
     .mb-1 { margin-bottom: 1rem; }
     .pill { display: inline-block; background: var(--green-dim); color: var(--green); font-size: 0.72rem; font-family: var(--font-body); font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 12px; margin-left: 0.4rem; vertical-align: middle; }
     .pill.new { background: var(--yellow-dim); color: var(--green); }
+
+    /* ══ SLOT MACHINE NAV ══════════════════════════════════════ */
+    .slot-machine {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .slot-machine-frame {
+      display: flex;
+      align-items: stretch;
+      background: #0a0a0a;
+      border: 3px solid var(--gold);
+      border-radius: 16px;
+      box-shadow: 0 0 0 1px #000, 0 0 24px rgba(201,148,42,0.35), inset 0 2px 8px rgba(0,0,0,0.8);
+      overflow: hidden;
+      position: relative;
+    }
+    .slot-reel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.4rem 2rem;
+      cursor: pointer;
+      background: linear-gradient(180deg, #111 0%, #1a1a1a 50%, #111 100%);
+      border-top: 2px solid #2a2a2a;
+      border-bottom: 2px solid #2a2a2a;
+      min-width: 160px;
+      transition: background 0.15s, transform 0.1s;
+      position: relative;
+      text-align: center;
+      user-select: none;
+    }
+    .slot-reel:hover {
+      background: linear-gradient(180deg, #1c1c1c 0%, #252525 50%, #1c1c1c 100%);
+    }
+    .slot-reel:active {
+      transform: scaleY(0.97);
+    }
+    .slot-reel.spinning .slot-symbol {
+      animation: reelSpin 0.6s ease-out;
+    }
+    @keyframes reelSpin {
+      0%   { transform: translateY(-60px) scale(0.5); opacity: 0; }
+      60%  { transform: translateY(8px) scale(1.15); opacity: 1; }
+      100% { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .slot-symbol {
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .slot-label {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.03em;
+    }
+    .slot-sub {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .slot-divider {
+      width: 2px;
+      background: repeating-linear-gradient(to bottom, #333 0px, #333 4px, #000 4px, #000 8px);
+      flex-shrink: 0;
+    }
+    .slot-lever {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      background: linear-gradient(180deg, #1f1f1f 0%, #0d0d0d 100%);
+      border-left: 2px solid var(--gold);
+      color: var(--gold);
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      writing-mode: vertical-rl;
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+    .slot-lever:hover { background: var(--gold); color: #000; }
+    .slot-payline {
+      width: calc(100% - 44px);
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(201,148,42,0.7), rgba(201,148,42,0.9), rgba(201,148,42,0.7), transparent);
+      margin-top: -1px;
+      box-shadow: 0 0 8px rgba(201,148,42,0.5);
+      pointer-events: none;
+    }
+    @media (max-width: 600px) {
+      .slot-reel { min-width: 100px; padding: 1rem 1.1rem; }
+      .slot-symbol { font-size: 1.8rem; }
+      .slot-label { font-size: 0.78rem; }
+    }
   </style>
 </head>
 
@@ -768,6 +870,31 @@
       <div class="hero-stat"><strong>19+</strong><span>Legal Age</span></div>
       <div class="hero-stat"><strong>24</strong><span>Live AB Operators</span></div>
       <div class="hero-stat"><strong>$0</strong><span>Tax on Winnings</span></div>
+    </div>
+
+    <!-- ════ SLOT MACHINE NAV ════ -->
+    <div class="slot-machine" aria-label="Quick navigation">
+      <div class="slot-machine-frame">
+        <div class="slot-reel" onclick="window.location='#top5-table'">
+          <div class="slot-symbol">🥇</div>
+          <div class="slot-label">Casinos Ranked</div>
+          <div class="slot-sub">Top 5 side-by-side</div>
+        </div>
+        <div class="slot-divider"></div>
+        <div class="slot-reel" onclick="window.location='#casino-finder'">
+          <div class="slot-symbol">🍒</div>
+          <div class="slot-label">Find My Casino</div>
+          <div class="slot-sub">Quick quiz</div>
+        </div>
+        <div class="slot-divider"></div>
+        <div class="slot-reel" onclick="window.location='#matchup'">
+          <div class="slot-symbol">⚖️</div>
+          <div class="slot-label">Compare Two</div>
+          <div class="slot-sub">Head-to-head</div>
+        </div>
+        <div class="slot-lever" onclick="spinSlots()" title="Spin!">&#9654;</div>
+      </div>
+      <div class="slot-payline"></div>
     </div>
   </div>
 </section>
@@ -1836,6 +1963,23 @@ function g2gRender(casino) {
 document.addEventListener('DOMContentLoaded', () => {
   G2G_CASINOS.forEach(g2gRender);
 });
+
+// Slot machine spin effect
+function spinSlots() {
+  const reels = document.querySelectorAll('.slot-reel');
+  const targets = ['#top5-table', '#casino-finder', '#matchup'];
+  reels.forEach((reel, i) => {
+    reel.classList.remove('spinning');
+    void reel.offsetWidth; // force reflow
+    const delay = i * 120;
+    setTimeout(() => {
+      reel.classList.add('spinning');
+      setTimeout(() => reel.classList.remove('spinning'), 700);
+    }, delay);
+  });
+  // After all reels spin, scroll to top5
+  setTimeout(() => { window.location = '#top5-table'; }, 650);
+}
 </script>
 
 </body>
