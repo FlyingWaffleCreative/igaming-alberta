@@ -330,6 +330,165 @@
     /* #1 special: cream border */
     .tbl-logo-card--1 .tbl-logo-card__img { box-shadow: 0 0 0 3px #F9E8A8; }
     .tbl-logo-card--1
+    
+    /* ══ NEW CASINO RANKING CARDS ══════════════════════════════════ */
+    .casino-card {
+      display: flex;
+      align-items: stretch;
+      background: var(--deep-felt);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      margin-bottom: 1rem;
+      font-family: var(--font-body);
+    }
+    .casino-card__logo-wrap {
+      position: relative;
+      width: 180px;
+      min-width: 180px;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem 1rem;
+      flex-shrink: 0;
+    }
+    .casino-card__rank {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 32px;
+      height: 32px;
+      background: var(--deep-felt);
+      border: 2px solid var(--line);
+      border-radius: 6px;
+      color: var(--chalk);
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .casino-card__rank--1 { background: var(--gold); color: var(--felt-black); border-color: var(--gold); }
+    .casino-card__logo {
+      width: 130px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+    .casino-card__ab-badge {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: var(--chalk);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 0.3rem 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+    .casino-card__body {
+      flex: 1;
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .casino-card__features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .casino-card__features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--chalk);
+      line-height: 1.4;
+    }
+    .casino-card__features li::before {
+      content: "✓";
+      color: var(--emerald);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    .casino-card__stats {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+    }
+    .casino-card__stat {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .casino-card__stat strong {
+      color: var(--chalk);
+      font-weight: 700;
+    }
+    .casino-card__stat .stat-value {
+      color: var(--emerald);
+      font-weight: 700;
+    }
+    .casino-card__cta-wrap {
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-width: 150px;
+      border-left: 1px solid var(--line);
+      flex-shrink: 0;
+    }
+    .casino-card__visit {
+      background: #E8722A;
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
+      transition: opacity 0.15s;
+    }
+    .casino-card__visit:hover { opacity: 0.88; }
+    .casino-card__review {
+      color: var(--emerald);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-align: center;
+      text-decoration: none;
+      line-height: 1.3;
+    }
+    .casino-card__review:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      .casino-card { flex-direction: column; }
+      .casino-card__logo-wrap { width: 100%; min-width: unset; flex-direction: row; padding: 1rem; gap: 1rem; }
+      .casino-card__rank { position: static; }
+      .casino-card__cta-wrap { border-left: none; border-top: 1px solid var(--line); flex-direction: row; }
+    }
     /* ══ MAIN LAYOUT ═══════════════════════════════════════════════ */
     main {
       max-width: 820px; width: 100%; margin: 0 auto; padding: 2rem 1.25rem; box-sizing: border-box;
@@ -997,6 +1156,133 @@
       </table>
     </div>
     <p class="scroll-hint">← Scroll table to see all columns on mobile →</p>
+
+  <!-- ════ RANKING CARDS ════ -->
+  <section id="ranking-cards" style="margin-top:2rem;">
+    <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--chalk);margin-bottom:1rem;letter-spacing:-0.02em;">Top 5 Alberta Online Casinos — Ranked</h2>
+
+  <!-- ════ RANKING CARD: JACKPOT CITY ════ -->
+  <div class="casino-card" id="card-jackpot-city">
+    <div class="casino-card__logo-wrap">
+      <div class="casino-card__rank casino-card__rank--1">1</div>
+      <img class="casino-card__logo" src="logos/card-jackpotcity.jpg" alt="Jackpot City" />
+      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
+    </div>
+    <div class="casino-card__body">
+      <ul class="casino-card__features">
+        <li>75+ live dealer tables including blackjack and roulette</li>
+        <li>Top-rated iOS and Android app</li>
+        <li>1,500+ slots from $0.10 a spin</li>
+      </ul>
+      <div class="casino-card__stats">
+        <div class="casino-card__stat">&#9881; Payout <strong>1-3 days</strong></div>
+        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">96.5%</span></div>
+      </div>
+    </div>
+    <div class="casino-card__cta-wrap">
+      <a class="casino-card__visit" href="#jackpot-city" rel="nofollow">Visit Site</a>
+      <a class="casino-card__review" href="#jackpot-city">Read Jackpot City<br>Review</a>
+    </div>
+  </div>
+
+  <!-- ════ RANKING CARD: DRAFTKINGS ════ -->
+  <div class="casino-card" id="card-draftkings">
+    <div class="casino-card__logo-wrap">
+      <div class="casino-card__rank">2</div>
+      <img class="casino-card__logo" src="logos/card-draftkings.jpg" alt="DraftKings" />
+      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
+    </div>
+    <div class="casino-card__body">
+      <ul class="casino-card__features">
+        <li>Full sportsbook with same-game parlays</li>
+        <li>Lowest deposit on our list at $5</li>
+        <li>NHL, NFL, CFL and 20+ sports covered</li>
+      </ul>
+      <div class="casino-card__stats">
+        <div class="casino-card__stat">&#9881; Payout <strong>1-5 days</strong></div>
+        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">95.8%</span></div>
+      </div>
+    </div>
+    <div class="casino-card__cta-wrap">
+      <a class="casino-card__visit" href="#draftkings" rel="nofollow">Visit Site</a>
+      <a class="casino-card__review" href="#draftkings">Read DraftKings<br>Review</a>
+    </div>
+  </div>
+
+  <!-- ════ RANKING CARD: BETMGM ════ -->
+  <div class="casino-card" id="card-betmgm">
+    <div class="casino-card__logo-wrap">
+      <div class="casino-card__rank">3</div>
+      <img class="casino-card__logo" src="logos/card-betmgm.jpg" alt="BetMGM" />
+      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
+    </div>
+    <div class="casino-card__body">
+      <ul class="casino-card__features">
+        <li>9,500+ games — Alberta's largest library</li>
+        <li>Combined casino + sportsbook in one wallet</li>
+        <li>Apple Pay and Interac supported</li>
+      </ul>
+      <div class="casino-card__stats">
+        <div class="casino-card__stat">&#9881; Payout <strong>2-5 days</strong></div>
+        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">96.1%</span></div>
+      </div>
+    </div>
+    <div class="casino-card__cta-wrap">
+      <a class="casino-card__visit" href="#betmgm" rel="nofollow">Visit Site</a>
+      <a class="casino-card__review" href="#betmgm">Read BetMGM<br>Review</a>
+    </div>
+  </div>
+
+  <!-- ════ RANKING CARD: BET365 ════ -->
+  <div class="casino-card" id="card-bet365">
+    <div class="casino-card__logo-wrap">
+      <div class="casino-card__rank">4</div>
+      <img class="casino-card__logo" src="logos/card-bet365.jpg" alt="bet365" />
+      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
+    </div>
+    <div class="casino-card__body">
+      <ul class="casino-card__features">
+        <li>400+ live events daily with in-app streaming</li>
+        <li>Industry-leading cash-out feature</li>
+        <li>1-3 day Interac payouts</li>
+      </ul>
+      <div class="casino-card__stats">
+        <div class="casino-card__stat">&#9881; Payout <strong>1-3 days</strong></div>
+        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">95.5%</span></div>
+      </div>
+    </div>
+    <div class="casino-card__cta-wrap">
+      <a class="casino-card__visit" href="#bet365" rel="nofollow">Visit Site</a>
+      <a class="casino-card__review" href="#bet365">Read bet365<br>Review</a>
+    </div>
+  </div>
+
+  <!-- ════ RANKING CARD: SPIN CASINO ════ -->
+  <div class="casino-card" id="card-spin-casino">
+    <div class="casino-card__logo-wrap">
+      <div class="casino-card__rank">5</div>
+      <img class="casino-card__logo" src="logos/card-spincasino.jpg" alt="Spin Casino" />
+      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
+    </div>
+    <div class="casino-card__body">
+      <ul class="casino-card__features">
+        <li>Evolution-powered live dealer tables</li>
+        <li>700+ curated games from Microgaming</li>
+        <li>8 deposit options with $10 min. limit</li>
+      </ul>
+      <div class="casino-card__stats">
+        <div class="casino-card__stat">&#9881; Payout <strong>2-5 days</strong></div>
+        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">97.1%</span></div>
+      </div>
+    </div>
+    <div class="casino-card__cta-wrap">
+      <a class="casino-card__visit" href="#spin-casino" rel="nofollow">Visit Site</a>
+      <a class="casino-card__review" href="#spin-casino">Read Spin Casino<br>Review</a>
+    </div>
+  </div>
+  </section>
+
+    <p class="scroll-hint" style="display:none;">← Scroll table to see all columns on mobile →</p>
 
     <div class="info-box">
       <p>Every casino on this page is legal for Alberta players. Each one is registered with <a href="https://aglc.ca/" rel="noopener" target="_blank">Alberta Gaming, Liquor and Cannabis (AGLC)</a>, the provincial gaming regulator, and operates under a commercial agreement with the <a href="https://www.abigaming.ca/" rel="noopener" target="_blank">Alberta iGaming Corporation (AiGC)</a>, the Crown corporation that manages Alberta's regulated online gambling market.</p>
