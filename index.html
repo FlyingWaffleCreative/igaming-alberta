@@ -224,9 +224,7 @@
     /* ══ HERO ══════════════════════════════════════════════════════ */
     .hero {
       background:
-        repeating-linear-gradient(
-          -45deg,
-          transparent,
+        transparent,
           transparent 28px,
           rgba(136,170,66,0.07) 28px,
           rgba(136,170,66,0.07) 30px
@@ -758,7 +756,7 @@
 
     /* ══ FAQ ════════════════════════════════════════════════════════ */
     .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 0.75rem; box-shadow: var(--shadow); }
-    .faq-q { padding: 1rem 1.25rem; font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--green); list-style: none; }
+    .faq-q { padding: 1rem 1.25rem; font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--chalk); list-style: none; }
     .faq-q::after { content: '+'; font-size: 1.4rem; line-height: 1; flex-shrink: 0; color: var(--red); font-family: var(--font-body); }
     details[open] .faq-q::after { content: '−'; }
     .faq-a { padding: 0 1.25rem 1rem; font-family: var(--font-body); font-size: 0.9rem; color: var(--text); line-height: 1.7; }
@@ -927,7 +925,7 @@
     }
     .slot-divider {
       width: 2px;
-      background: repeating-linear-gradient(to bottom, #333 0px, #333 4px, #000 4px, #000 8px);
+      background: #333 0px, #333 4px, #000 4px, #000 8px);
       flex-shrink: 0;
     }
     .slot-lever {
@@ -965,14 +963,13 @@
 <body>
 
 <!-- ════ RESPONSIBLE GAMING BAR ════════════════════════════════════ -->
-<div class="responsible-gaming-bar" style="background:var(--alert-red);color:#fff;text-align:center;padding:0.45rem 1rem;font-size:0.8rem;font-family:var(--font-body);font-weight:600;letter-spacing:0.01em;">
-  18+ only. Gamble responsibly. Need help? Call <a href="tel:18663322322" style="color:#fff;text-decoration:underline;">1-866-332-2322</a>
-</div>
+
 
 <!-- ════ HEADER ═════════════════════════════════════════════════════ -->
 <header style="background:var(--felt-black);border-bottom:1px solid var(--line);padding:0.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;">
   <a href="/" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0;">
     <img src="brand/igamingalberta-logo-on-dark.svg" alt="igamingalberta.ca" style="height:40px;width:auto;" />
+    <div style="color:var(--muted);font-family:var(--font-body);font-size:0.78rem;margin-top:0.3rem;white-space:nowrap;">Find the right casino. Play with confidence.</div>
   </a>
   <nav style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
     <a href="#top5-table" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;font-size:0.9rem;text-decoration:none;white-space:nowrap;">Rankings</a>
@@ -987,13 +984,9 @@
 <!-- ════ HERO ════════════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>Alberta Online Casinos <em>2026</em></h1>
-    <p class="hero-scout">Find the right casino. Play with confidence.</p>
-    <p class="hero-sub">Alberta's iGaming market launched July 13, 2026. Find our top ranked legal casinos to play in AB - ranked by your gambling peers.</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><strong>19+</strong><span>Legal Age</span></div>
-      <div class="hero-stat"><strong>24</strong><span>Live AB Operators</span></div>
-      <div class="hero-stat"><strong>$0</strong><span>Tax on Winnings</span></div>
+    <h1>Find your best Alberta online casino</h1>
+    <p class="hero-scout">November 2026</p>
+    
     </div>
 
     <!-- ════ SLOT MACHINE NAV ════ -->
@@ -1029,8 +1022,8 @@
 
   <!-- ════ TOP 5 COMPARISON TABLE ════════════════════════════════ -->
   <section id="top5-table">
-    <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.5rem;color:var(--chalk);letter-spacing:-0.02em;margin-bottom:0.5rem;">Best Online Casinos in Alberta — Ranked for 2026</h2>
-    <p style="color:var(--muted);font-size:0.95rem;margin-bottom:1.25rem;">Alberta's regulated iGaming market launched July 13, 2026 under the <a href="https://www.abigaming.ca/" rel="noopener" target="_blank" style="color:var(--emerald);">Alberta iGaming Corporation (AiGC)</a>. Every casino below is fully licensed, independently tested, and legal for Alberta players. We rank on games, payouts, mobile, and support — no paid placements.</p>
+    <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.5rem;color:var(--chalk);letter-spacing:-0.02em;margin-bottom:0.5rem;">Best Online Casinos in Alberta - Ranked for 2026</h2>
+    <p style="color:var(--muted);font-size:0.95rem;margin-bottom:1.25rem;">Alberta's regulated iGaming market launched July 13, 2026 under the <a href="https://www.abigaming.ca/" rel="noopener" target="_blank" style="color:var(--emerald);">Alberta iGaming Corporation (AiGC)</a>. Every casino below is fully licensed, independently tested, and legal for Alberta players. We rank on games, payouts, mobile, and support - no paid placements.</p>
     <div class="table-wrap">
       <table>
         <thead>
@@ -1121,130 +1114,7 @@
     </div>
     <p class="scroll-hint">← Scroll table to see all columns on mobile →</p>
 
-  <!-- ════ RANKING CARDS ════ -->
-  <section id="ranking-cards" style="margin-top:2rem;">
-    <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--chalk);margin-bottom:1rem;letter-spacing:-0.02em;">Top 5 Alberta Online Casinos — Ranked</h2>
-
-  <!-- ════ RANKING CARD: JACKPOT CITY ════ -->
-  <div class="casino-card" id="card-jackpot-city">
-    <div class="casino-card__logo-wrap">
-      <div class="casino-card__rank casino-card__rank--1">1</div>
-      <img class="casino-card__logo" src="logos/card-jackpotcity.jpg" alt="Jackpot City" />
-      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
-    </div>
-    <div class="casino-card__body">
-      <ul class="casino-card__features">
-        <li>75+ live dealer tables including blackjack and roulette</li>
-        <li>Top-rated iOS and Android app</li>
-        <li>1,500+ slots from $0.10 a spin</li>
-      </ul>
-      <div class="casino-card__stats">
-        <div class="casino-card__stat">&#9881; Payout <strong>1-3 days</strong></div>
-        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">96.5%</span></div>
-      </div>
-    </div>
-    <div class="casino-card__cta-wrap">
-      <a class="casino-card__visit" href="#jackpot-city" rel="nofollow">Visit Site</a>
-      <a class="casino-card__review" href="#jackpot-city">Read Jackpot City<br>Review</a>
-    </div>
-  </div>
-
-  <!-- ════ RANKING CARD: DRAFTKINGS ════ -->
-  <div class="casino-card" id="card-draftkings">
-    <div class="casino-card__logo-wrap">
-      <div class="casino-card__rank">2</div>
-      <img class="casino-card__logo" src="logos/card-draftkings.jpg" alt="DraftKings" />
-      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
-    </div>
-    <div class="casino-card__body">
-      <ul class="casino-card__features">
-        <li>Full sportsbook with same-game parlays</li>
-        <li>Lowest deposit on our list at $5</li>
-        <li>NHL, NFL, CFL and 20+ sports covered</li>
-      </ul>
-      <div class="casino-card__stats">
-        <div class="casino-card__stat">&#9881; Payout <strong>1-5 days</strong></div>
-        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">95.8%</span></div>
-      </div>
-    </div>
-    <div class="casino-card__cta-wrap">
-      <a class="casino-card__visit" href="#draftkings" rel="nofollow">Visit Site</a>
-      <a class="casino-card__review" href="#draftkings">Read DraftKings<br>Review</a>
-    </div>
-  </div>
-
-  <!-- ════ RANKING CARD: BETMGM ════ -->
-  <div class="casino-card" id="card-betmgm">
-    <div class="casino-card__logo-wrap">
-      <div class="casino-card__rank">3</div>
-      <img class="casino-card__logo" src="logos/card-betmgm.jpg" alt="BetMGM" />
-      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
-    </div>
-    <div class="casino-card__body">
-      <ul class="casino-card__features">
-        <li>9,500+ games — Alberta's largest library</li>
-        <li>Combined casino + sportsbook in one wallet</li>
-        <li>Apple Pay and Interac supported</li>
-      </ul>
-      <div class="casino-card__stats">
-        <div class="casino-card__stat">&#9881; Payout <strong>2-5 days</strong></div>
-        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">96.1%</span></div>
-      </div>
-    </div>
-    <div class="casino-card__cta-wrap">
-      <a class="casino-card__visit" href="#betmgm" rel="nofollow">Visit Site</a>
-      <a class="casino-card__review" href="#betmgm">Read BetMGM<br>Review</a>
-    </div>
-  </div>
-
-  <!-- ════ RANKING CARD: BET365 ════ -->
-  <div class="casino-card" id="card-bet365">
-    <div class="casino-card__logo-wrap">
-      <div class="casino-card__rank">4</div>
-      <img class="casino-card__logo" src="logos/card-bet365.jpg" alt="bet365" />
-      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
-    </div>
-    <div class="casino-card__body">
-      <ul class="casino-card__features">
-        <li>400+ live events daily with in-app streaming</li>
-        <li>Industry-leading cash-out feature</li>
-        <li>1-3 day Interac payouts</li>
-      </ul>
-      <div class="casino-card__stats">
-        <div class="casino-card__stat">&#9881; Payout <strong>1-3 days</strong></div>
-        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">95.5%</span></div>
-      </div>
-    </div>
-    <div class="casino-card__cta-wrap">
-      <a class="casino-card__visit" href="#bet365" rel="nofollow">Visit Site</a>
-      <a class="casino-card__review" href="#bet365">Read bet365<br>Review</a>
-    </div>
-  </div>
-
-  <!-- ════ RANKING CARD: SPIN CASINO ════ -->
-  <div class="casino-card" id="card-spin-casino">
-    <div class="casino-card__logo-wrap">
-      <div class="casino-card__rank">5</div>
-      <img class="casino-card__logo" src="logos/card-spincasino.jpg" alt="Spin Casino" />
-      <div class="casino-card__ab-badge">&#127809; Accepts Alberta players</div>
-    </div>
-    <div class="casino-card__body">
-      <ul class="casino-card__features">
-        <li>Evolution-powered live dealer tables</li>
-        <li>700+ curated games from Microgaming</li>
-        <li>8 deposit options with $10 min. limit</li>
-      </ul>
-      <div class="casino-card__stats">
-        <div class="casino-card__stat">&#9881; Payout <strong>2-5 days</strong></div>
-        <div class="casino-card__stat">&#9889; Win Rate <span class="stat-value">97.1%</span></div>
-      </div>
-    </div>
-    <div class="casino-card__cta-wrap">
-      <a class="casino-card__visit" href="#spin-casino" rel="nofollow">Visit Site</a>
-      <a class="casino-card__review" href="#spin-casino">Read Spin Casino<br>Review</a>
-    </div>
-  </div>
-  </section>
+  
 
     <p class="scroll-hint" style="display:none;">← Scroll table to see all columns on mobile →</p>
 
@@ -1258,7 +1128,7 @@
   <!-- ════ TOP PAYING SLOTS ════════════════════════════════════════ -->
   <section id="top-paying-slots" style="margin-top:2.5rem;">
     <h2 style="font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--chalk);margin-bottom:0.4rem;letter-spacing:-0.02em;">Top Paying Slots of All Time</h2>
-    <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.25rem;">The highest RTP (Return to Player) slots ever made — meaning more of your money comes back over time.</p>
+    <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.25rem;">The highest RTP (Return to Player) slots ever made - meaning more of your money comes back over time.</p>
 
     <div style="display:flex;flex-direction:column;gap:0.75rem;">
 
@@ -1266,7 +1136,7 @@
       <div style="display:flex;align-items:center;background:var(--deep-felt);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;gap:0;">
         <div style="background:var(--gold);color:var(--felt-black);font-family:var(--font-head);font-weight:800;font-size:1.1rem;width:48px;min-width:48px;display:flex;align-items:center;justify-content:center;align-self:stretch;">1</div>
         <div style="width:90px;min-width:90px;background:#111;display:flex;align-items:center;justify-content:center;padding:0.75rem 0.5rem;">
-          <img src="img/slot-ugga-bugga.jpg" alt="Ugga Bugga" style="width:72px;height:72px;object-fit:cover;border-radius:8px;" />
+          <img src="img/slot-ugga-bugga.jpg" alt="Ugga Bugga" style="max-width:100%;height:auto;border-radius:8px;" />
         </div>
         <div style="flex:1;padding:0.9rem 1rem;">
           <div style="font-family:var(--font-head);font-weight:800;font-size:1rem;color:var(--chalk);">Ugga Bugga</div>
@@ -1282,7 +1152,7 @@
       <div style="display:flex;align-items:center;background:var(--deep-felt);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;gap:0;">
         <div style="background:var(--deep-felt);color:var(--chalk);font-family:var(--font-head);font-weight:800;font-size:1.1rem;width:48px;min-width:48px;display:flex;align-items:center;justify-content:center;align-self:stretch;border-right:1px solid var(--line);">2</div>
         <div style="width:90px;min-width:90px;background:#111;display:flex;align-items:center;justify-content:center;padding:0.75rem 0.5rem;">
-          <img src="img/slot-book-of-99.jpg" alt="Book of 99" style="width:72px;height:72px;object-fit:cover;border-radius:8px;" />
+          <img src="img/slot-book-of-99.jpg" alt="Book of 99" style="max-width:100%;height:auto;border-radius:8px;" />
         </div>
         <div style="flex:1;padding:0.9rem 1rem;">
           <div style="font-family:var(--font-head);font-weight:800;font-size:1rem;color:var(--chalk);">Book of 99</div>
@@ -1298,7 +1168,7 @@
       <div style="display:flex;align-items:center;background:var(--deep-felt);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;gap:0;">
         <div style="background:var(--deep-felt);color:var(--chalk);font-family:var(--font-head);font-weight:800;font-size:1.1rem;width:48px;min-width:48px;display:flex;align-items:center;justify-content:center;align-self:stretch;border-right:1px solid var(--line);">3</div>
         <div style="width:90px;min-width:90px;background:#111;display:flex;align-items:center;justify-content:center;padding:0.75rem 0.5rem;">
-          <img src="img/slot-mega-joker.jpg" alt="Mega Joker" style="width:72px;height:72px;object-fit:cover;border-radius:8px;" />
+          <img src="img/slot-mega-joker.jpg" alt="Mega Joker" style="max-width:100%;height:auto;border-radius:8px;" />
         </div>
         <div style="flex:1;padding:0.9rem 1rem;">
           <div style="font-family:var(--font-head);font-weight:800;font-size:1rem;color:var(--chalk);">Mega Joker</div>
@@ -1315,464 +1185,24 @@
   </section>
 
 
-  <!-- ════ CASINO #1: JACKPOT CITY ════════════════════════════════ -->
-  <section id="jackpot-city">
-    <h2 class="cc-section-h">🏆 #1 - Jackpot City Alberta</h2>
-    <div class="cc-card">
-      <div class="cc-header">
-        <div class="cc-rank gold">#1</div>
-        <div class="cc-logo"><img src="logos/jackpotcity.jpg" alt="Jackpot City Casino" /></div>
-        <div class="cc-name-wrap">
-          <div class="cc-name">Jackpot City Alberta</div>
-          <div class="cc-best">⭐ Best for: Mobile Play &amp; Slots</div>
-        </div>
-        <div class="cc-score-wrap">
-          <div class="cc-score">4.9</div>
-          <div class="cc-stars">★★★★★</div>
-        </div>
-      </div>
-      <div class="cc-facts">
-        <div class="cc-fact">
-          <div class="cc-fact-label">Games</div>
-          <div class="cc-fact-value">1,500+</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Payout</div>
-          <div class="cc-fact-value">1-3 days</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Min. Deposit</div>
-          <div class="cc-fact-value">$10</div>
-        </div>
-      </div>
-      <div class="cc-body">
-        <div class="cc-verdict">"The best all-round casino in Alberta right now. 75+ live dealer tables, a top-rated iOS and Android app, and slots from $0.10 a spin. Payouts via Interac land in 1-3 days - faster than most."</div>
-        <div class="cc-watchout"><span>⚠ Watch out for</span>No Pragmatic Play titles - that means no Big Bass Bonanza, Gates of Olympus, or Sweet Bonanza. Bonus wagering requirement hits 70x on some offers - read the fine print before claiming.</div>
-        <div class="g2g-widget" id="g2g-jackpotcity">
-          <div class="g2g-header">
-            <span class="g2g-label">🎰 G2G - Gambler to Gambler</span>
-            <span class="g2g-tag">Read one · Leave one</span>
-          </div>
-          <div class="g2g-seed">
-            <div class="g2g-seed-stars">★★★★★</div>
-            <div class="g2g-seed-text">"Huff 'n' Puff kept me up until 2 AM on a Tuesday. Payout hit my Interac in two days flat. The app hasn't crashed on me once - and I've thrown some real sessions at it."</div>
-            <div class="g2g-seed-author">- AB player, Edmonton · August 2026</div>
-          </div>
-          <div class="g2g-reviews-list" id="reviews-jackpotcity"></div>
-          <div class="g2g-form">
-            <label class="g2g-form-label">Your turn - rate Jackpot City:</label>
-            <div class="g2g-stars-input" id="stars-jackpotcity" data-rating="0">
-              <button class="g2g-star-btn" data-val="1" onclick="g2gStar('jackpotcity',1)">★</button>
-              <button class="g2g-star-btn" data-val="2" onclick="g2gStar('jackpotcity',2)">★</button>
-              <button class="g2g-star-btn" data-val="3" onclick="g2gStar('jackpotcity',3)">★</button>
-              <button class="g2g-star-btn" data-val="4" onclick="g2gStar('jackpotcity',4)">★</button>
-              <button class="g2g-star-btn" data-val="5" onclick="g2gStar('jackpotcity',5)">★</button>
-            </div>
-            <textarea class="g2g-textarea" id="text-jackpotcity" placeholder="Share your experience - good or bad. What did you actually play? How long did withdrawal take?"></textarea>
-            <button class="g2g-submit" onclick="g2gSubmit('jackpotcity')">Leave your review</button>
-            <div class="g2g-avg" id="avg-jackpotcity"></div>
-          </div>
-        </div>
-        <a class="cc-cta" href="#" rel="nofollow noopener" onclick="return false;">Claim Bonus</a>
-        <p class="cc-disclaimer">19+ · AiGC Licensed · Terms apply · Gamble responsibly</p>
-      </div>
-    </div>
-  </section>
+  
 
-  <!-- ════ CASINO #2: DRAFTKINGS ═══════════════════════════════════ -->
-  <section id="draftkings">
-    <h2 class="cc-section-h">#2 - DraftKings Alberta</h2>
-    <div class="cc-card">
-      <div class="cc-header">
-        <div class="cc-rank silver">#2</div>
-        <div class="cc-logo"><img src="logos/draftkings.jpg" alt="DraftKings" /></div>
-        <div class="cc-name-wrap">
-          <div class="cc-name">DraftKings Alberta</div>
-          <div class="cc-best">⭐ Best for: Sports Betting + Casino</div>
-        </div>
-        <div class="cc-score-wrap">
-          <div class="cc-score">4.8</div>
-          <div class="cc-stars">★★★★★</div>
-        </div>
-      </div>
-      <div class="cc-facts">
-        <div class="cc-fact">
-          <div class="cc-fact-label">Games</div>
-          <div class="cc-fact-value">500+</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Min. Deposit</div>
-          <div class="cc-fact-value">$5</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Sportsbook</div>
-          <div class="cc-fact-value">Full ✓</div>
-        </div>
-      </div>
-      <div class="cc-body">
-        <div class="cc-verdict">"Lowest deposit on our list at $5. World-class sportsbook covering NHL, NFL, CFL and more - with same-game parlays. If you're betting on the Oilers, this is your home."</div>
-        <div class="cc-watchout"><span>⚠ Watch out for</span>Casino side is thin - no Pragmatic Play slots at all, limited live dealer variety vs dedicated casino sites. Withdrawal processing can drag to 5 days if identity verification hasn't been completed upfront.</div>
-        <div class="g2g-widget" id="g2g-draftkings">
-          <div class="g2g-header">
-            <span class="g2g-label">🎰 G2G - Gambler to Gambler</span>
-            <span class="g2g-tag">Read one · Leave one</span>
-          </div>
-          <div class="g2g-seed">
-            <div class="g2g-seed-stars">★★★★★</div>
-            <div class="g2g-seed-text">"Put $20 on the Oilers in Game 7, spun some slots while I waited. Both in the same app, same wallet. Withdrawal took 3 days but it showed up. No complaints."</div>
-            <div class="g2g-seed-author">- AB player, Calgary · August 2026</div>
-          </div>
-          <div class="g2g-reviews-list" id="reviews-draftkings"></div>
-          <div class="g2g-form">
-            <label class="g2g-form-label">Your turn - rate DraftKings:</label>
-            <div class="g2g-stars-input" id="stars-draftkings" data-rating="0">
-              <button class="g2g-star-btn" data-val="1" onclick="g2gStar('draftkings',1)">★</button>
-              <button class="g2g-star-btn" data-val="2" onclick="g2gStar('draftkings',2)">★</button>
-              <button class="g2g-star-btn" data-val="3" onclick="g2gStar('draftkings',3)">★</button>
-              <button class="g2g-star-btn" data-val="4" onclick="g2gStar('draftkings',4)">★</button>
-              <button class="g2g-star-btn" data-val="5" onclick="g2gStar('draftkings',5)">★</button>
-            </div>
-            <textarea class="g2g-textarea" id="text-draftkings" placeholder="Sports bettor? Casino player? Tell us how it actually went."></textarea>
-            <button class="g2g-submit" onclick="g2gSubmit('draftkings')">Leave your review</button>
-            <div class="g2g-avg" id="avg-draftkings"></div>
-          </div>
-        </div>
-        <a class="cc-cta" href="#" rel="nofollow noopener" onclick="return false;">Claim Bonus</a>
-        <p class="cc-disclaimer">19+ · AiGC Licensed · Terms apply · Gamble responsibly</p>
-      </div>
-    </div>
-  </section>
+  
 
-  <!-- ════ CASINO #3: BETMGM ════════════════════════════════════════ -->
-  <section id="betmgm">
-    <h2 class="cc-section-h">#3 - BetMGM Alberta</h2>
-    <div class="cc-card">
-      <div class="cc-header">
-        <div class="cc-rank bronze">#3</div>
-        <div class="cc-logo"><img src="logos/betmgm.jpg" alt="BetMGM" /></div>
-        <div class="cc-name-wrap">
-          <div class="cc-name">BetMGM Alberta</div>
-          <div class="cc-best">⭐ Best for: Biggest Game Library</div>
-        </div>
-        <div class="cc-score-wrap">
-          <div class="cc-score">4.8</div>
-          <div class="cc-stars">★★★★★</div>
-        </div>
-      </div>
-      <div class="cc-facts">
-        <div class="cc-fact">
-          <div class="cc-fact-label">Games</div>
-          <div class="cc-fact-value">9,500+</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Payout</div>
-          <div class="cc-fact-value">2-5 days</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Min. Deposit</div>
-          <div class="cc-fact-value">$10</div>
-        </div>
-      </div>
-      <div class="cc-body">
-        <div class="cc-verdict">"Alberta's biggest casino by far - 9,500+ games including slots, live tables, and a full sportsbook. Backed by 50 years of MGM Vegas heritage. Apple Pay and Interac supported."</div>
-        <div class="cc-watchout"><span>⚠ Watch out for</span>Welcome bonus carries a steep 15x wagering requirement on deposit + bonus combined before you can withdraw. Some popular titles - including select Pragmatic Play releases - are region-locked out of Alberta pending full licensing.</div>
-        <div class="g2g-widget" id="g2g-betmgm">
-          <div class="g2g-header">
-            <span class="g2g-label">🎰 G2G - Gambler to Gambler</span>
-            <span class="g2g-tag">Read one · Leave one</span>
-          </div>
-          <div class="g2g-seed">
-            <div class="g2g-seed-stars">★★★★☆</div>
-            <div class="g2g-seed-text">"9,500 games sounds like marketing copy but it's actually real - I found titles I'd never seen anywhere else. Bonus terms are brutal though. Read them twice before you claim anything."</div>
-            <div class="g2g-seed-author">- AB player, Red Deer · August 2026</div>
-          </div>
-          <div class="g2g-reviews-list" id="reviews-betmgm"></div>
-          <div class="g2g-form">
-            <label class="g2g-form-label">Your turn - rate BetMGM:</label>
-            <div class="g2g-stars-input" id="stars-betmgm" data-rating="0">
-              <button class="g2g-star-btn" data-val="1" onclick="g2gStar('betmgm',1)">★</button>
-              <button class="g2g-star-btn" data-val="2" onclick="g2gStar('betmgm',2)">★</button>
-              <button class="g2g-star-btn" data-val="3" onclick="g2gStar('betmgm',3)">★</button>
-              <button class="g2g-star-btn" data-val="4" onclick="g2gStar('betmgm',4)">★</button>
-              <button class="g2g-star-btn" data-val="5" onclick="g2gStar('betmgm',5)">★</button>
-            </div>
-            <textarea class="g2g-textarea" id="text-betmgm" placeholder="What did you play? How was the bonus? Did you actually cash out?"></textarea>
-            <button class="g2g-submit" onclick="g2gSubmit('betmgm')">Leave your review</button>
-            <div class="g2g-avg" id="avg-betmgm"></div>
-          </div>
-        </div>
-        <a class="cc-cta" href="#" rel="nofollow noopener" onclick="return false;">Claim Bonus</a>
-        <p class="cc-disclaimer">19+ · AiGC Licensed · Terms apply · Gamble responsibly</p>
-      </div>
-    </div>
-  </section>
+  
 
-  <!-- ════ CASINO #4: BET365 ════════════════════════════════════════ -->
-  <section id="bet365">
-    <h2 class="cc-section-h">#4 - bet365 Alberta</h2>
-    <div class="cc-card">
-      <div class="cc-header">
-        <div class="cc-rank plain">#4</div>
-        <div class="cc-logo"><img src="logos/bet365.jpg" alt="bet365" /></div>
-        <div class="cc-name-wrap">
-          <div class="cc-name">bet365 Alberta</div>
-          <div class="cc-best">⭐ Best for: Live Sports Streaming</div>
-        </div>
-        <div class="cc-score-wrap">
-          <div class="cc-score">4.7</div>
-          <div class="cc-stars">★★★★1⁄2</div>
-        </div>
-      </div>
-      <div class="cc-facts">
-        <div class="cc-fact">
-          <div class="cc-fact-label">Live Events</div>
-          <div class="cc-fact-value">400+ / day</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Payout</div>
-          <div class="cc-fact-value">1-3 days</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Streaming</div>
-          <div class="cc-fact-value">In-App ✓</div>
-        </div>
-      </div>
-      <div class="cc-body">
-        <div class="cc-verdict">"World's biggest online bookmaker. Watch and bet live on 400+ daily events directly in the app. Fast 1-3 day Interac payouts. The gold standard for in-play sports in Alberta."</div>
-        <div class="cc-watchout"><span>⚠ Watch out for</span>Welcome offer requires a qualifying bet at odds of 1/5 (1.20) or greater before the bonus releases - easy to miss. Slot library is curated rather than exhaustive; no Pragmatic Play catalogue and no Big Bass, Starlight Princess, or similar series.</div>
-        <div class="g2g-widget" id="g2g-bet365">
-          <div class="g2g-header">
-            <span class="g2g-label">🎰 G2G - Gambler to Gambler</span>
-            <span class="g2g-tag">Read one · Leave one</span>
-          </div>
-          <div class="g2g-seed">
-            <div class="g2g-seed-stars">★★★★★</div>
-            <div class="g2g-seed-text">"Watched the match and cashed out live when we went up 2-0. That cash-out feature alone is worth the signup. Interac withdrawal landed next day. No nonsense."</div>
-            <div class="g2g-seed-author">- AB player, Lethbridge · August 2026</div>
-          </div>
-          <div class="g2g-reviews-list" id="reviews-bet365"></div>
-          <div class="g2g-form">
-            <label class="g2g-form-label">Your turn - rate bet365:</label>
-            <div class="g2g-stars-input" id="stars-bet365" data-rating="0">
-              <button class="g2g-star-btn" data-val="1" onclick="g2gStar('bet365',1)">★</button>
-              <button class="g2g-star-btn" data-val="2" onclick="g2gStar('bet365',2)">★</button>
-              <button class="g2g-star-btn" data-val="3" onclick="g2gStar('bet365',3)">★</button>
-              <button class="g2g-star-btn" data-val="4" onclick="g2gStar('bet365',4)">★</button>
-              <button class="g2g-star-btn" data-val="5" onclick="g2gStar('bet365',5)">★</button>
-            </div>
-            <textarea class="g2g-textarea" id="text-bet365" placeholder="Sports, casino, or both? How did the live betting hold up?"></textarea>
-            <button class="g2g-submit" onclick="g2gSubmit('bet365')">Leave your review</button>
-            <div class="g2g-avg" id="avg-bet365"></div>
-          </div>
-        </div>
-        <a class="cc-cta" href="#" rel="nofollow noopener" onclick="return false;">Claim Bonus</a>
-        <p class="cc-disclaimer">19+ · AiGC Licensed · Terms apply · Gamble responsibly</p>
-      </div>
-    </div>
-  </section>
+  
 
-  <!-- ════ CASINO #5: SPIN CASINO ═══════════════════════════════════ -->
-  <section id="spin-casino">
-    <h2 class="cc-section-h">#5 - Spin Casino Alberta</h2>
-    <div class="cc-card">
-      <div class="cc-header">
-        <div class="cc-rank plain">#5</div>
-        <div class="cc-logo"><img src="logos/spincasino.jpg" alt="Spin Casino" /></div>
-        <div class="cc-name-wrap">
-          <div class="cc-name">Spin Casino Alberta</div>
-          <div class="cc-best">⭐ Best for: Live Dealer Tables</div>
-        </div>
-        <div class="cc-score-wrap">
-          <div class="cc-score">4.6</div>
-          <div class="cc-stars">★★★★1⁄2</div>
-        </div>
-      </div>
-      <div class="cc-facts">
-        <div class="cc-fact">
-          <div class="cc-fact-label">Games</div>
-          <div class="cc-fact-value">700+</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Payout</div>
-          <div class="cc-fact-value">2-5 days</div>
-        </div>
-        <div class="cc-fact">
-          <div class="cc-fact-label">Live Casino</div>
-          <div class="cc-fact-value">Evolution ✓</div>
-        </div>
-      </div>
-      <div class="cc-body">
-        <div class="cc-verdict">"Powered by Microgaming and Evolution Gaming - the two biggest names in the business. The sleeper pick for live blackjack and roulette players who want quality tables without the noise."</div>
-        <div class="cc-watchout"><span>⚠ Watch out for</span>No dedicated mobile app - browser-only on iOS and Android. No sportsbook whatsoever. Withdrawal limits are lower than rivals at entry-level tiers, and there's no Pragmatic Play content meaning the entire Megaways and Big Bass catalogue is absent.</div>
-        <div class="g2g-widget" id="g2g-spincasino">
-          <div class="g2g-header">
-            <span class="g2g-label">🎰 G2G - Gambler to Gambler</span>
-            <span class="g2g-tag">Read one · Leave one</span>
-          </div>
-          <div class="g2g-seed">
-            <div class="g2g-seed-stars">★★★★☆</div>
-            <div class="g2g-seed-text">"Live blackjack dealer was sharp and the tables loaded fast on my phone browser. Nothing flashy - just works. Would rather have an app but the site doesn't give you a reason to complain."</div>
-            <div class="g2g-seed-author">- AB player, Medicine Hat · August 2026</div>
-          </div>
-          <div class="g2g-reviews-list" id="reviews-spincasino"></div>
-          <div class="g2g-form">
-            <label class="g2g-form-label">Your turn - rate Spin Casino:</label>
-            <div class="g2g-stars-input" id="stars-spincasino" data-rating="0">
-              <button class="g2g-star-btn" data-val="1" onclick="g2gStar('spincasino',1)">★</button>
-              <button class="g2g-star-btn" data-val="2" onclick="g2gStar('spincasino',2)">★</button>
-              <button class="g2g-star-btn" data-val="3" onclick="g2gStar('spincasino',3)">★</button>
-              <button class="g2g-star-btn" data-val="4" onclick="g2gStar('spincasino',4)">★</button>
-              <button class="g2g-star-btn" data-val="5" onclick="g2gStar('spincasino',5)">★</button>
-            </div>
-            <textarea class="g2g-textarea" id="text-spincasino" placeholder="Live tables? Slots? How was the mobile experience on your phone?"></textarea>
-            <button class="g2g-submit" onclick="g2gSubmit('spincasino')">Leave your review</button>
-            <div class="g2g-avg" id="avg-spincasino"></div>
-          </div>
-        </div>
-        <a class="cc-cta" href="#" rel="nofollow noopener" onclick="return false;">Claim Bonus</a>
-        <p class="cc-disclaimer">19+ · AiGC Licensed · Terms apply · Gamble responsibly</p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ════ ALBERTA IGAMING GUIDE ═════════════════════════════════════ -->
-  <section id="alberta-guide">
-    <h2>Alberta's Regulated iGaming Market - What You Need to Know</h2>
-
-    <p>Alberta became the second Canadian province - after Ontario - to open its iGaming market to licensed private operators. The framework is designed to channel players away from unregulated offshore sites toward licensed platforms with player protections, responsible gambling tools, and dispute resolution mechanisms.</p>
-
-    <h3>🗓️ Key Timeline</h3>
-    <ul>
-      <li><strong>2020:</strong> PlayAlberta launches as the only regulated online casino in Alberta.</li>
-      <li><strong>2024:</strong> Bill 16 (Red Tape Reduction Act) updates the legal framework, clarifying provincial authority over online gaming.</li>
-      <li><strong>2025:</strong> Bill 48 - the <em>iGaming Alberta Act</em> - passes, establishing the multi-operator regulated market.</li>
-      <li><strong>July 13, 2026:</strong> Alberta's regulated iGaming market goes live. BetMGM, DraftKings, bet365, Jackpot City, and others launch on Day 1.</li>
-      <li><strong>October 13, 2026:</strong> Remaining operators in transition complete their rollout.</li>
-    </ul>
-
-    <h3>🏛️ Who Regulates Alberta Online Casinos?</h3>
-    <p>Two agencies share oversight of the Alberta iGaming market:</p>
-    <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Agency</th>
-          <th>Role</th>
-          <th>Stat</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong><a href="https://aglc.ca/igaming" rel="noopener" target="_blank">Alberta Gaming, Liquor &amp; Cannabis (AGLC)</a></strong></td>
-          <td>Issues licences, enforces compliance, sets regulatory standards</td>
-          <td>24 licensed AB iGaming operators</td>
-        </tr>
-        <tr>
-          <td><strong><a href="https://www.abigaming.ca/" rel="noopener" target="_blank">Alberta iGaming Corporation (AiGC)</a></strong></td>
-          <td>Day-to-day market operations &amp; player protections</td>
-          <td><a href="https://www.abigaming.ca/players/registered-igaming-sites/" rel="noopener" target="_blank">24 registered AB online gambling sites</a> (casinos + sportsbooks)</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-
-    <h3>⚖️ Quick Legal Facts</h3>
-    <ul>
-      <li><strong>Legal age:</strong> 18+ (lower than Ontario's 19+)</li>
-      <li><strong>Taxes on winnings:</strong> None for casual players - gambling winnings are not taxable income in Canada.</li>
-      <li><strong>Offshore sites:</strong> Technically not illegal to use as a player, but they lack Alberta's consumer protections and dispute mechanisms.</li>
-      <li><strong>Responsible gambling tools:</strong> All licensed sites must offer deposit limits, cool-off periods, and self-exclusion.</li>
-    </ul>
-
-    <div class="info-box warning">
-      <h4>⚠️ Only Use Licensed Operators</h4>
-      <p>Stick to AiGC-registered operators. Licensed casinos are legally required to pay out winnings, protect your personal data, and provide problem gambling support. Offshore sites have none of these obligations.</p>
-    </div>
-  </section>
+  
 
   <!-- ════ GLOSSARY / DEFINITIONS ════════════════════════════════════ -->
-  <section id="glossary">
-    <h2>Alberta Gambling Glossary - Key Terms Defined</h2>
-    <p>New to online gambling in Alberta? Here's what the key terms actually mean.</p>
-
-    <div class="def-grid">
-      <div class="def-card">
-        <div class="def-icon">🎰</div>
-        <h4>Online Casino</h4>
-        <p>A licensed website or app offering digital versions of casino games - slots, blackjack, roulette, baccarat, poker, and live dealer tables. Players wager real money and can win real money. In Alberta, all legal online casinos must be registered with the AiGC.</p>
-      </div>
-
-      <div class="def-card">
-        <div class="def-icon">⚽</div>
-        <h4>Sportsbook</h4>
-        <p>A platform where you place bets on the outcomes of real-world sporting events - hockey, football, basketball, soccer, UFC, and more. Odds are expressed as moneylines, point spreads, or totals. Many Alberta platforms (BetMGM, DraftKings, bet365) combine a sportsbook with an online casino under one account.</p>
-      </div>
-
-      <div class="def-card">
-        <div class="def-icon">📈</div>
-        <h4>Polymarket (Prediction Markets)</h4>
-        <p>Polymarket is a global prediction market platform where users bet on the outcomes of real-world events - elections, economic indicators, sports results, and more - using cryptocurrency. Unlike regulated sportsbooks, Polymarket operates as a decentralized exchange. It is not currently licensed in Alberta and does not fall under AiGC jurisdiction. Canadian users should verify their eligibility before participating.</p>
-      </div>
-
-      <div class="def-card">
-        <div class="def-icon">🎲</div>
-        <h4>Live Dealer Casino</h4>
-        <p>A casino game streamed in real time from a physical studio, with a real human dealer managing cards, dice, or a roulette wheel. You see the action via video stream and place bets digitally. It bridges the gap between online convenience and the atmosphere of a physical casino.</p>
-      </div>
-
-      <div class="def-card">
-        <div class="def-icon">🎁</div>
-        <h4>Welcome Bonus</h4>
-        <p>An offer new players receive when depositing for the first time - usually a matched deposit bonus (e.g., 100% up to $500) or free spins. Always read the wagering requirements (how many times you must bet the bonus before withdrawing) before claiming.</p>
-      </div>
-
-      <div class="def-card">
-        <div class="def-icon">💸</div>
-        <h4>RTP (Return to Player)</h4>
-        <p>The theoretical percentage of all wagered money a slot machine pays back over time. A slot with 96% RTP returns $96 for every $100 wagered over millions of spins. Higher RTP = better odds. Always check this before choosing a slot.</p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ════ HOW TO CHOOSE ══════════════════════════════════════════════ -->
-  <section id="how-to-choose">
-    <h2>How to Choose the Right Alberta Online Casino</h2>
-    <p>The right casino depends on what you're playing. Here's a quick decision framework:</p>
-
-    <div class="info-box">
-      <p>Every casino on this page is legal for Alberta players. Each one is registered with <a href="https://aglc.ca/" rel="noopener" target="_blank">Alberta Gaming, Liquor and Cannabis (AGLC)</a>, the provincial gaming regulator, and operates under a commercial agreement with the <a href="https://www.abigaming.ca/" rel="noopener" target="_blank">Alberta iGaming Corporation (AiGC)</a>, the Crown corporation that manages Alberta's regulated online gambling market.</p>
-      <p>Alberta's regulated market opened on July 13, 2026, giving players provincial protections such as responsible gambling tools, verified fair games, and a formal complaints process.</p>
-    </div>
-
-    <div class="info-box" style="margin-top:0.75rem;">
-      <h4>⚽ Sports betting is your priority</h4>
-      <p>→ <strong>bet365 Alberta</strong> (in-play + streaming) or <strong>DraftKings Alberta</strong> (same-game parlays + DFS)</p>
-    </div>
-
-    <div class="info-box" style="margin-top:0.75rem;">
-      <h4>🃏 You want both sports and casino in one app</h4>
-      <p>→ <strong>BetMGM Alberta</strong> (largest combined library) or <strong>DraftKings Alberta</strong> (best sportsbook + growing casino)</p>
-    </div>
-
-    <div class="info-box" style="margin-top:0.75rem;">
-      <h4>🎲 Live dealer tables are your thing</h4>
-      <p>→ <strong>Jackpot City Alberta</strong> (75+ tables) or <strong>Spin Casino Alberta</strong> (Evolution-powered, clean UX)</p>
-    </div>
-
-    <div class="info-box" style="margin-top:0.75rem;">
-      <h4>📱 Mobile-first player</h4>
-      <p>→ <strong>Jackpot City Alberta</strong> (best-rated iOS/Android app) or <strong>DraftKings Alberta</strong> (top-rated sports app)</p>
-    </div>
-
-    <h3>Our 5-Point Checklist Before Depositing</h3>
-    <ol>
-      <li><strong>Verify the AiGC licence.</strong> Check the <a href="https://www.abigaming.ca/players/registered-igaming-sites/" rel="noopener" target="_blank">official AiGC directory</a> before depositing anywhere.</li>
-      <li><strong>Read the bonus T&Cs.</strong> A 100x wagering requirement makes a "bonus" nearly worthless.</li>
-      <li><strong>Check the payout methods.</strong> Interac e-Transfer is the gold standard for Canadian players.</li>
-      <li><strong>Test customer support.</strong> Initiate a live chat before depositing. Good casinos respond in under 2 minutes.</li>
-      <li><strong>Set your limits first.</strong> Every licensed Alberta casino must offer deposit limits. Use them.</li>
-    </ol>
-  </section>
+  
 
   <!-- ════ ABOUT THE EXPERT ════════════════════════════════════════ -->
   <section id="about-expert">
@@ -1793,136 +1223,52 @@
     <h2>Frequently Asked Questions</h2>
 
     <details class="faq-item">
-      <summary class="faq-q">Is online gambling legal in Alberta in 2026?</summary>
-      <div class="faq-a">Yes - Alberta launched a fully regulated, multi-operator iGaming market on July 13, 2026. The Alberta Gaming, Liquor and Cannabis Commission (AGLC) licenses operators, and the Alberta iGaming Corporation (AiGC) oversees the market. All five casinos on this page are fully licensed and legal for Alberta players to use.</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">Is online gambling legal in Alberta in 2026?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">Yes - Alberta launched a fully regulated, multi-operator iGaming market on July 13, 2026. The Alberta Gaming, Liquor and Cannabis Commission (AGLC) licenses operators, and the Alberta iGaming Corporation (AiGC) oversees the market. All five casinos on this page are fully licensed and legal for Alberta players to use.</div>
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">What is the minimum gambling age in Alberta?</summary>
-      <div class="faq-a">18 years old. This applies to both land-based and online gambling in Alberta - making it more accessible than Ontario, where the legal age is 19. All licensed platforms are required to verify age before allowing deposits.</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">What is the minimum gambling age in Alberta?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">18 years old. This applies to both land-based and online gambling in Alberta - making it more accessible than Ontario, where the legal age is 19. All licensed platforms are required to verify age before allowing deposits.</div>
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">Do I have to pay tax on online casino winnings in Alberta?</summary>
-      <div class="faq-a">No. In Canada, casino and sports betting winnings are generally not considered taxable income for recreational players. The Canada Revenue Agency (CRA) treats gambling as a leisure activity, not a business. The exception is if gambling is your primary income source - in that case, consult a tax professional.</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">Do I have to pay tax on online casino winnings in Alberta?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">No. In Canada, casino and sports betting winnings are generally not considered taxable income for recreational players. The Canada Revenue Agency (CRA) treats gambling as a leisure activity, not a business. The exception is if gambling is your primary income source - in that case, consult a tax professional.</div>
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">Which Alberta casino has the most games?</summary>
-      <div class="faq-a">BetMGM Alberta leads with 9,500+ games - by far the largest library in Alberta's regulated market. Jackpot City Alberta offers 1,500+ with a particularly strong slot and live dealer selection. Spin Casino Alberta has 700+ curated titles powered by Microgaming and Evolution.</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">Which Alberta casino has the most games?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">BetMGM Alberta leads with 9,500+ games - by far the largest library in Alberta's regulated market. Jackpot City Alberta offers 1,500+ with a particularly strong slot and live dealer selection. Spin Casino Alberta has 700+ curated titles powered by Microgaming and Evolution.</div>
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">What's the difference between an online casino and a sportsbook?</summary>
-      <div class="faq-a">An online casino offers digital gambling games - slots, blackjack, roulette, baccarat, poker, and live dealer games. A sportsbook lets you bet on the outcomes of real sporting events (hockey, football, soccer, etc.). Many Alberta platforms - including BetMGM and DraftKings - offer both under a single account and shared wallet.</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">What's the difference between an online casino and a sportsbook?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">An online casino offers digital gambling games - slots, blackjack, roulette, baccarat, poker, and live dealer games. A sportsbook lets you bet on the outcomes of real sporting events (hockey, football, soccer, etc.). Many Alberta platforms - including BetMGM and DraftKings - offer both under a single account and shared wallet.</div>
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">What is Polymarket, and can I use it in Alberta?</summary>
-      <div class="faq-a">Polymarket is a decentralized prediction market platform where users bet on real-world event outcomes (elections, economic data, sports results) using cryptocurrency. It is not an online casino or sportsbook and is not licensed under Alberta's AiGC framework. Canadian users should check current eligibility and regulatory status before participating, as the rules for prediction markets differ from licensed gambling platforms.</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">What is Polymarket, and can I use it in Alberta?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">Polymarket is a decentralized prediction market platform where users bet on real-world event outcomes (elections, economic data, sports results) using cryptocurrency. It is not an online casino or sportsbook and is not licensed under Alberta's AiGC framework. Canadian users should check current eligibility and regulatory status before participating, as the rules for prediction markets differ from licensed gambling platforms.</div>
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">How do I deposit and withdraw at Alberta online casinos?</summary>
-      <div class="faq-a">Interac e-Transfer is the most widely supported and recommended method for Canadian players - it's fast, familiar, and available at all five casinos on our list. Other common options include Visa, Mastercard, and Apple Pay (at BetMGM). Withdrawal times range from 1-3 days (Jackpot City, bet365) to 2-5 days (BetMGM, Spin Casino).</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">How do I deposit and withdraw at Alberta online casinos?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">Interac e-Transfer is the most widely supported and recommended method for Canadian players - it's fast, familiar, and available at all five casinos on our list. Other common options include Visa, Mastercard, and Apple Pay (at BetMGM). Withdrawal times range from 1-3 days (Jackpot City, bet365) to 2-5 days (BetMGM, Spin Casino).</div>
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">Are there responsible gambling tools available?</summary>
-      <div class="faq-a">Yes - and they're mandatory. All AiGC-licensed operators must provide deposit limits, loss limits, session time limits, cool-off periods (temporary breaks), and self-exclusion options. If you're concerned about your gambling, the Alberta Health Services problem gambling line is available 24/7: <a href="tel:18663322322">1-866-332-2322</a>.</div>
+      <summary class="faq-q" style="color:var(--chalk);font-family:var(--font-body);font-weight:600;">Are there responsible gambling tools available?</summary>
+      <div class="faq-a" style="color:var(--muted);padding:0.75rem 0;">Yes - and they're mandatory. All AiGC-licensed operators must provide deposit limits, loss limits, session time limits, cool-off periods (temporary breaks), and self-exclusion options. If you're concerned about your gambling, the Alberta Health Services problem gambling line is available 24/7: <a href="tel:18663322322">1-866-332-2322</a>.</div>
     </details>
   </section>
 
   <!-- ════ METHODOLOGY ═════════════════════════════════════════════ -->
   <!-- ════ CASINO FINDER TOOL ════════════════════════════════════════════ -->
-  <section id="casino-finder">
-    <h2>🧠 Find Your Casino - 3 Quick Questions</h2>
-    <p>Answer three questions and we'll tell you which Alberta casino fits best. No signup, no email, just a straight answer.</p>
-
-    <div class="finder-tool" id="finderTool">
-
-      <!-- Step 1 -->
-      <div class="finder-step active" data-step="1">
-        <div class="finder-step-label">Question 1 of 3</div>
-        <div class="finder-q">What do you mainly want to do?</div>
-        <div class="finder-options">
-          <button class="finder-btn" data-key="play" data-val="slots" onclick="finderPick(this)">🎰 Play slots &amp; casino games</button>
-          <button class="finder-btn" data-key="play" data-val="sports" onclick="finderPick(this)">⚽ Bet on sports</button>
-          <button class="finder-btn" data-key="play" data-val="both" onclick="finderPick(this)">🎲 Both - casino + sports</button>
-          <button class="finder-btn" data-key="play" data-val="live" onclick="finderPick(this)">🃏 Live dealer tables</button>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="finder-step" data-step="2">
-        <div class="finder-step-label">Question 2 of 3</div>
-        <div class="finder-q">How do you usually play?</div>
-        <div class="finder-options">
-          <button class="finder-btn" data-key="device" data-val="mobile" onclick="finderPick(this)">📱 Mostly on my phone</button>
-          <button class="finder-btn" data-key="device" data-val="desktop" onclick="finderPick(this)">💻 Desktop / laptop</button>
-          <button class="finder-btn" data-key="device" data-val="both" onclick="finderPick(this)">🔀 Mix of both</button>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="finder-step" data-step="3">
-        <div class="finder-step-label">Question 3 of 3</div>
-        <div class="finder-q">What's your typical first deposit?</div>
-        <div class="finder-options">
-          <button class="finder-btn" data-key="deposit" data-val="low" onclick="finderPick(this)">💵 Under $20 - keep it casual</button>
-          <button class="finder-btn" data-key="deposit" data-val="mid" onclick="finderPick(this)">💵 $20-$100 - proper session</button>
-          <button class="finder-btn" data-key="deposit" data-val="high" onclick="finderPick(this)">💵 $100+ - I'm here to play</button>
-        </div>
-      </div>
-
-      <!-- Result -->
-      <div class="finder-step" data-step="result" id="finderResult">
-        <div class="finder-result-inner" id="finderResultInner"></div>
-        <button class="finder-reset-btn" onclick="finderReset()">↩ Start over</button>
-      </div>
-
-      <!-- Progress bar -->
-      <div class="finder-progress" id="finderProgress">
-        <div class="finder-progress-fill" id="finderProgressFill" style="width:0%"></div>
-      </div>
-
-    </div>
-  </section>
+  
 
   <!-- ════ CASINO MATCHUP TOOL ═══════════════════════════════════════════ -->
-  <section id="matchup">
-    <h2>⚖️ Casino Matchup - Compare Any Two</h2>
-    <p>Pick two casinos and see how they stack up head-to-head across every category that actually matters.</p>
-
-    <div class="matchup-selectors">
-      <div class="matchup-select-wrap">
-        <label class="matchup-label">Casino A</label>
-        <select class="matchup-select" id="matchupA" onchange="renderMatchup()">
-          <option value="jackpotcity">Jackpot City</option>
-          <option value="draftkings">DraftKings</option>
-          <option value="betmgm">BetMGM</option>
-          <option value="bet365">bet365</option>
-          <option value="spincasino">Spin Casino</option>
-        </select>
-      </div>
-      <div class="matchup-vs">🥊 VS</div>
-      <div class="matchup-select-wrap">
-        <label class="matchup-label">Casino B</label>
-        <select class="matchup-select" id="matchupB" onchange="renderMatchup()">
-          <option value="jackpotcity">Jackpot City</option>
-          <option value="draftkings" selected>DraftKings</option>
-          <option value="betmgm">BetMGM</option>
-          <option value="bet365">bet365</option>
-          <option value="spincasino">Spin Casino</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="matchup-table-wrap" id="matchupTable"></div>
-
-    <div class="matchup-verdict" id="matchupVerdict"></div>
-
-  </section>
+  
 
   <section id="methodology">
     <h2>Our Review Methodology</h2>
@@ -1946,6 +1292,9 @@
   <p>This page contains affiliate links. If you click through and register, CasinoScout may earn a commission at no cost to you. Our editorial rankings are independent of commercial relationships.</p>
   <p style="margin-top:0.75rem;">🍁 Content is Canada-specific and Alberta-regulated market focused. All operators listed are registered with the Alberta iGaming Corporation (AiGC). 19+ only. Gamble responsibly.</p>
   <p style="margin-top:0.75rem; font-size:0.72rem; color:#7a9e8a;">© 2026 CasinoScout · igamingalberta.ca · Alberta, Canada</p>
+<div class="responsible-gaming-bar" style="background:var(--alert-red);color:#fff;text-align:center;padding:0.45rem 1rem;font-size:0.8rem;font-family:var(--font-body);font-weight:600;letter-spacing:0.01em;">
+  18+ only. Gamble responsibly. Need help? Call <a href="tel:18663322322" style="color:#fff;text-decoration:underline;">1-866-332-2322</a>
+</div>
 </footer>
 
 <script>
