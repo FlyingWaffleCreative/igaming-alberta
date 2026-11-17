@@ -156,7 +156,7 @@
     }
 
     /* Subtle Wheat Beige page container highlight */
-    main::before { display: none; }
+    main::before { display: none; height: 0; margin: 0; }
 
     a { color: #3a7abf; text-decoration: none; }
     a:hover { color: var(--red); text-decoration: underline; }
@@ -224,7 +224,7 @@
         ),
         linear-gradient(160deg, #0e2210 0%, var(--green) 45%, var(--green-light) 100%);
       color: #fff;
-      padding: 1.5rem 1.25rem 1.25rem;
+      padding: 1.25rem 1.25rem 0;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -489,7 +489,7 @@
     }
     /* ══ MAIN LAYOUT ═══════════════════════════════════════════════ */
     main {
-      max-width: 820px; width: 100%; margin: 0 auto; padding: 2rem 1.25rem; box-sizing: border-box;
+      max-width: 820px; width: 100%; margin: 0 auto; padding: 1rem 1.25rem 2rem; box-sizing: border-box;
     }
 
     section { margin-bottom: 3rem; }
@@ -944,14 +944,7 @@
       flex-shrink: 0;
     }
     .slot-lever:hover { background: var(--gold); color: #000; }
-    .slot-payline {
-      width: calc(100% - 44px);
-      height: 3px;
-      background: linear-gradient(90deg, transparent, rgba(201,148,42,0.7), rgba(201,148,42,0.9), rgba(201,148,42,0.7), transparent);
-      margin-top: -1px;
-      box-shadow: 0 0 8px rgba(201,148,42,0.5);
-      pointer-events: none;
-    }
+    .slot-payline { display: none; }
     @media (max-width: 600px) {
       .slot-reel { min-width: 100px; padding: 1rem 1.1rem; }
       .slot-symbol { font-size: 1.8rem; }
